@@ -1,0 +1,662 @@
+
+Ltsputil.exe: LTspiceIV/SwitcherCADIII utility version 2.93
+
+
+
+  About this program.
+  -------------------
+  This utility program has been written by Helmut Sennewald.
+  It has been tested with LTspiceIV/SwitcherCADIII.
+  Special thanks to Mike Engelhardt from Linear Technology for this
+  great program LTspiceIV/SwitcherCADIII and his support.
+  The LTspiceIV/SwitcherCADIII program can be downloaded from
+  the Linear Technology website  http://www.linear.com/software/ .
+  Please be aware that a change in the raw file format can cause a
+  crash of this program. There is no guarantee how long LTSpice will
+  use this raw file format.
+  I hope all these features are integrated in any future release
+  of LTspiceIV/SwitcherCADIII.
+  The utility program Ltsputil.exe is freeware and it has been 
+  developed independently of Linear Technology.
+  There is no guarantee that the generated data files are free of errors.
+  Support of this program is provided by the author of this utility.
+  You can reach the author in the Ltspice group of YAHOO.
+  Link: http://groups.yahoo.com/group/LTspice/
+  E-mail: helmutsennewald@yahoo.com
+  
+  Enjoy it!
+
+
+
+Usage: 
+  Ltsputil.exe -command [param1] [param2] [param3] [..] ... [paramN]
+
+    Options for commands:
+    -a           About this utility program.
+    -c[o][a|b][s][z] source destination
+                 Converts (binary file <--> ASCII file, zero x-offset)
+    -e[o][a|b][l|v] source dest stepnum [varext] [xstart xend]
+                 Equalize steps, new stepsize is  x-axis/(stepnum-1)
+                 Extension string is added to the variable(node) names.
+    -m[o][a|b][l|v] source1 source2 destination extension1 extension2
+                 Merge two raw files and extend variable names.
+    -n[o][a|b][l|v] source1 source2 destination extension1 extension2
+                 N-Merge data of two raw files and extend variable names.
+    -t[o][a|b][z] source dest [sweepNo] 
+                 Convert text file to raw file 
+    -x[o][s|t][nn][list] source dest varfmt delimfmt infofmt sig1 [sig2] ..
+                 Export data from raw file to different column formatted
+                 file(s). 'nn' selects different headers in output file(s).
+                 [list]: Any combination of [i][d,a,p,r,c] 
+                 d=dB, a=abs, p=phase, q=phase +/-pi, r=real, c=complex,
+                 i=index. inffmt is the preceeding string of the info line.
+                 varfmt and delimfmt are C-syntax printf() controls
+    -i source
+                 Info about raw file
+    -h[n]        n = a|c|e|h|i||m|n|t|x|z  '-hz' prints all help pages.
+
+    General options:
+      [o]verwrite existing output files, [s]eperate swept files, 
+      [l|v] linear/vector interpolation, [z]ero x-axis offset
+	  [a|b] ASCII or binary format of result file.
+
+
+
+  Conversion between binary raw file and ASCII raw file format.
+  -------------------------------------------------------------
+  It converts and copies a raw data file to either an ASCII-data file
+  or a binary data file.
+  Other useful options can add the plot offset to the x-axis and
+  swept parameter simulations can be split to single runs stored in
+  separate raw files.
+
+  Usage
+    Ltsputil.exe -c[o][a|b][z][s] source destination
+          Option 'o'   : Overwrite an existing output file.
+		  Option 'a|b' : Output data format is 'a'SCII or 'b'inary.
+                         If none of these two options is given,
+                         output data format is binary.
+		  Option 'z'   : Add x-axis offset to x-axis, zero offset.
+		  Option 's'   : Write each sweep into a different file.
+		                 File name contains the sweep number
+		                 Example: out.raw -> out1.raw, out2.raw ...
+
+  Example
+	Ltsputil.exe -c mybin.raw myascii.raw
+	        Option -c or -cb forces binary output format.
+
+  Example
+	Ltsputil.exe -ca myxy.raw mybin.raw
+	        Option -ca forces ASCII output format.
+
+  Example
+	Ltsputil.exe -cbz myxy.raw mybin.raw
+	        Option z means zero offset after it's added to the x-axis.
+
+  Example
+	Ltsputil.exe -cbzs myxy.raw mybin.raw
+	        Option z means reset offset after it's added to the x-axis.
+	        Option b means binary data format.
+	        Option s means one file per sweep run in the simulation.
+
+
+
+
+  Equalize stepsize of a LTSpice raw file.
+  ----------------------------------------
+  This function generates a new LTSpice raw data file with a chosen number
+  of data points with equal step size. This can be very helpful with later
+  external post processing, e.g. FFT.
+  Background information about (LT)Spice:
+  You have no control of the really used time steps in .TRAN simulations.
+  The only parameter you have there is minimum time step. The more activity
+  is on the signals, the smaller becomes the stepsize in .TRAN simulations.
+  The equalize function uses either linear or vector interpolation to
+  calculate data values in a fixed step size. Vector interpolation is used
+  for complex data only(.AC analysis). It has no influence on real data 
+  (.TRAN, .DC...). 
+  The x-axis starting point and end point can be specified. If the x-axis
+  of the equalized step is beyond the simulated x-axis, the first/last
+  y-data values are hold in the output file (no extrapolation)
+  This behaviour can be sometimes observed in .TRAN simulations where the
+  specified stop time is often not exactly reached. It can be avoided by
+  specifying a slightly larger stop time as really needed.
+  Using a small minimum stepsize in the simulation greatly helps to reduce
+  the interpolation errors. 
+  I recommend to switch off compression in .TRAN simulations if you 
+  intend to merge raw files or if you want to equalize the time steps.
+  The compression switch is in the control panel of LTSpice.
+  The raw file size can be reduced dramatically with the the .SAVE
+  command in LTSpice.
+
+  General usage:
+    Ltsputil.exe -e[o][l|v][a|b] source dest stepnum [varext] [xstart xend]
+          Option 'o'   : Overwrite an existing output file.
+          Option 'l|v' : Use 'l'inear or 'v'ector interpolation.
+                         If none of these two options is given,
+                         vector interpolation will be used.
+                         The 'v' option should be used for .AC analysis.
+		  Option 'a'   : Output data format is ASCII.
+		                 'b'inary is assumed as default if none is set.
+          Optional a variable names extension can be specified.
+          Optional a x-axis start and end value can be specified.
+
+  Example: 1001 points, add "" nothing to the variable names.
+    Ltsputil.exe -e my.raw myeq.raw 1001 ""
+          If you look the new raw file(myeq.raw) in LTSpice,t
+          the variables(nodes)have kept their original names.
+          Vector interpolation will be used, because -e is the same as -ev.
+
+  Example: 1001 points, add "_e" to the variable names
+    Ltsputil.exe -e my.raw myeq.raw 1001 "_e"
+          If you look the new raw file(myeq.raw) in LTSpice,
+          the variables(nodes) have become new names. V(out)
+          now will be V(out_e) in the LTSpice output display.
+
+  Example: 
+    Ltsputil.exe -el my.raw myeq.raw 1001 "_e"
+          Same as above, but -el forces linear interpolation in .AC analysis
+          If no complex data are given, always linear interpolation is used
+
+  Example: 
+    Ltsputil.exe -ea my.raw myeq.raw 1001 "_e" 2.5e0 5.5e0
+          Node names are extended with "_e".
+          Output data file's x-axis is limited from 2.5 to 5.5
+          Option -ea forces ASCII data output mode
+
+
+
+  Info about a file
+  -----------------
+  It prints simulation properties of a raw file. The information mainly comes
+  from the head lines of the raw file. You can get this information also
+  if you open the raw file with a text editor. It is ASCII text.
+  The biggest part of the raw files are the variable(node) values which
+  are normally in binary format. You can have ASCII data instead when you
+  select ASCII in the control panel compression menu. Normally this makes
+  no sense, because the file size will be four times increased.
+
+  Usage:
+  	Ltsputil.exe -i source
+
+  Example:
+    Ltsputil my.raw
+
+      Result:
+         Title: * D:\Daten\Ltc_spice\Educational\phono.asc
+         Date: Mon Dec 10 11:12:13  2002
+         Plotname: Transient Analysis
+         Flags: real forward
+         No. Variables      : 24
+         No. Points         : 434
+         Offset             : 0.000000000e0
+         No. Points         : 434
+         No. Points         : 434
+         Start x-axis value : 0.0
+         End . x-axis value : 100e-6
+         Num. ox x-axis sweeps : 1
+         ASCII DATA
+
+
+
+  Merge data of two raw files
+  ---------------------------
+  Merging two raw files allows a direct comparison of two totally different
+  circuit simulations in one graphical output window.
+  It can be also used to add limit curves.
+  The number of simulation steps in each file may be different.
+  File size of the output file can be up to twice the sum of both files,
+  especially with .TRAN simulations where you never have the same x-axis
+  values. The program calculates new variable values for every x-axis
+  value from each file. 
+  The merge-function uses either linear or vector interpolation to
+  calculate data values in a fixed step size. Vector interpolation is used
+  for complex data only(.AC analysis). It has no influence on real data 
+  (.TRAN, .DC...). 
+  Using a small minimum stepsize in the simulation greatly helps to reduce
+  the interpolation errors. 
+  I recommend to switch off compression in .TRAN simulation if you
+  think of merging the generated raw files or if you want to equalize
+  the time steps. The compression switch is in the control panel of 
+  LTspiceIV/SwitcherCADIII.
+  The raw file size can be reduced dramatically with the the .SAVE
+  command in LTSpice.
+
+  General usage:
+   Ltsputil.exe -m[o][l|v][a|b] source1 source2 destination "ext1" "ext2"
+          Option 'o'   : Overwrite an existing output file.
+          Option 'l|v' : Use 'l'inear or 'v'ector interpolation.
+                         If none of these two options is given,
+                         vector interpolation will be used.
+                         The 'v' option should be used for .AC analysis.
+		  Option 'a'   : Output data format is ASCII.
+		                 'b'inary is assumed as default if none is set.
+
+  Example 1: 1001 points, add ""(=nothing) to the variable names
+     Ltsputil.exe -m in1.raw in2.raw out.raw "_1" "_2"
+          If you look at the new raw file in LTSpice, the variables(nodes) have
+          got new names. All variable(node) names from in1.raw are extended
+          by _1 ,e.g. V(out_1), and all names from in2.raw are extended 
+          by _2 ,e.g. V(out_2).
+          Vector interpolation will be used, because -m is the same as -mv .
+
+     Ltsputil.exe -m in1.raw in2.raw out.raw "" "_"
+          The names of in1.raw are kept in the out.raw file, but we
+          will get extended names for the variables of in2.raw, e.g. V(out_).
+
+     Ltsputil.exe -ml in1.raw in2.raw out.raw "" "_"
+          Same as above, but -ml forces linear interpolation in .AC analysis
+          If no complex data is given, always linear interpolation is used
+
+     Ltsputil.exe -moa in1.raw in2.raw out.raw "" "_"
+          Option -ma forces ASCII output mode.
+
+
+
+  N-Merge data of two raw files
+  ----------------------------
+  Merging two raw files allows a direct comparison of two totally different
+  circuit simulations in one graphical output window. 
+  It can be also used to add limit curves.
+  The number of simulation steps in each file may be different.
+  File size of the output file mainly depends on the number of simulation
+  steps of the first file, because the program only calculates values
+  for every time/frequency value in the first file. This helps to reduce
+  the size of data files especially with .TRAN simulations.
+  The NMerge-function uses either linear or vector interpolation to
+  calculate data values in a fixed step size. Vector interpolation is used
+  for complex data only(.AC analysis). It has no influence on real data 
+  (.TRAN, .DC...). 
+  Using a small minimum stepsize in the simulation greatly helps to reduce
+  the interpolation errors. 
+  I recommend to switch off compression in .TRAN simulation if you
+  think of merging the generated raw files or if you want to equalize
+  the time steps. The compression switch is in the control panel of 
+  LTspiceIV/SwitcherCADIII.
+  The raw file size can be reduced dramatically with the the .SAVE
+  command in LTSpice.
+
+  General usage:
+   Ltsputil.exe -n[o][l|v][a|b] source1 source2 destination "ext1" "ext2"
+          Option 'o'   : Overwrite an existing output file.
+          Option 'l|v' : Use 'l'inear or 'v'ector interpolation.
+                         If none of these two options is given,
+                         vector interpolation will be used.
+                         The 'v' option should be used for .AC analysis.
+		  Option 'a'   : Output data format is ASCII.
+		                 'b'inary is assumed as default if none is set.
+
+  Example 1: 1001 points, add ""(=nothing) to the variable names
+     Ltsputil.exe -n in1.raw in2.raw out.raw "_1" "_2"
+          If you look at the new raw file in LTSpice, the variables(nodes) have
+          got new names. All variable(node) names from in1.raw are extended
+          by _1 ,e.g. V(out_1), and all names from in2.raw are extended 
+          by _2 ,e.g. V(out_2).
+          Vector interpolation will be used, because -m is the same as -mv .
+
+     Ltsputil.exe -n in1.raw in2.raw out.raw "" "_"
+          The names of in1.raw are kept in the out.raw file, but we
+          will get extended names for the variables of in2.raw, e.g. V(out_).
+
+     Ltsputil.exe -nl in1.raw in2.raw out.raw "" "_"
+          Same as above, but -nl forces linear interpolation in .AC analysis
+          If no complex data is given, always linear interpolation is used
+
+     Ltsputil.exe -noa in1.raw in2.raw out.raw "" "_"
+          Option -na forces ASCII output mode.
+
+
+
+Usage: 
+  Ltsputil.exe -command [param1] [param2] [param3] [..] ... [paramN]
+
+    Options for commands:
+    -a           About this utility program.
+    -c[o][a|b][s][z] source destination
+                 Converts (binary file <--> ASCII file, zero x-offset)
+    -e[o][a|b][l|v] source dest stepnum [varext] [xstart xend]
+                 Equalize steps, new stepsize is  x-axis/(stepnum-1)
+                 Extension string is added to the variable(node) names.
+    -m[o][a|b][l|v] source1 source2 destination extension1 extension2
+                 Merge two raw files and extend variable names.
+    -n[o][a|b][l|v] source1 source2 destination extension1 extension2
+                 N-Merge data of two raw files and extend variable names.
+    -t[o][a|b][z] source dest [sweepNo] 
+                 Convert text file to raw file 
+    -x[o][s|t][nn][list] source dest varfmt delimfmt infofmt sig1 [sig2] ..
+                 Export data from raw file to different column formatted
+                 file(s). 'nn' selects different headers in output file(s).
+                 [list]: Any combination of [i][d,a,p,r,c] 
+                 d=dB, a=abs, p=phase, q=phase +/-pi, r=real, c=complex,
+                 i=index. inffmt is the preceeding string of the info line.
+                 varfmt and delimfmt are C-syntax printf() controls
+    -i source
+                 Info about raw file
+    -h[n]        n = a|c|e|h|i||m|n|t|x|z  '-hz' prints all help pages.
+
+    General options:
+      [o]verwrite existing output files, [s]eperate swept files, 
+      [l|v] linear/vector interpolation, [z]ero x-axis offset
+	  [a|b] ASCII or binary format of result file.
+
+
+
+  Export data from raw file
+  --------------------------
+  This command retrieves the selected signals from a simulation raw file and
+  stores it column formatted to a new file.
+  This allows you to do any other post processing without knowing the raw file
+  data format. You can also easily copy and paste these column based data
+  to your favorite graphic, math or spread sheet program.
+  Swept parameter simulations can be split into single runs stored in
+  separate raw files or transposed to parallel columns.
+  I would recommend switching off compression in .TRAN simulation if you
+  think of merging the raw files generated or if you want to equalize
+  the time steps. This hint is basically for .TRAN simulations only.
+  The compression switch is in the control panel of LTspiceIV/SwitcherCADIII.
+
+  Usage:
+   Ltsputil.exe
+      -x[o][s|t][nn][list] src dest varfmt delimfmt infofmt sig1 [sig2] ..
+
+      Option 'o' : Overwrite an existing output file.
+	  Option 's' : Write each sweep into a different file.
+		           File name contains the sweep number
+		           Example: out.plt -> out1.plt, out2.plt ...
+		           Single swept output files have the greatest flexibility.
+      Option 't' : A parameter swept raw file will be transposed to parallel
+                   columns. This requires that all sweeps must have the same
+                   number of x-axis steps. Thus all .TRAN raw files must be 
+                   preprocessed(equalized) with "ltsputil -e".
+                   Graphic programs give greater flexibilty with sweep data
+                   organized in columns compared to sweep data in sequences.
+      Option nn 
+            none : The same as '1'.
+             '0' : Only data values in output file.
+             '1' : Additional #ASCII file info head lines in output file.
+             '2' : Additional info line before each sweep run in output file.
+             '3' : Option '1' + '2'.
+             '4' : Additional automation info headlines with exactly the same
+                   number of columns like the data rows. The info is in the
+                   same order as in option '1'.
+             '5' : Option '1' + '4' .
+             '6' : Option '2' + '4' .
+             '7' : Option '1' + '2' + '4' .
+                   Options for easiest file import of swept files:
+                     The most convenient options are 's' or 't' in most cases.
+                     Other useful options are depending on the graphic program.
+                     DPLOT 0,(1)  GNUPLOT 0,1,(2)  ORIGIN 0,(1),(2)
+                     EXCEL, MATLAB, MATHCAD, SCILAB : 0 or 4
+      list       : Optional 'i' for index followed by any combination of
+                   'd|a|p|q|r|c' characters
+                   Default is 'rc' for complex data if list is empty.
+                   d=dB, a=abs, p=phase, q=phase +/-pi, r=real, c=complex,
+      src        : name of the input raw file
+      dest       : name of the output file
+      varfmt     : C-syntax printf() format string for the data
+                   Example: Floating point 7 digits resolution -> "%15.7e"
+                   Always specify >=8 char. more as precision. 15 = 7 + 8
+                   This ensures exact column format if option '4' is used.
+      delimfmt   : C-syntax printf() format string for the column
+                   delimiter, e.g "," for a ',' delimiter
+      infofmt    : The info line starts with this string. It precedes each
+                   sweep data set if option '2' is set.
+                   Only an empty line is written if infofmt is empty "".
+                   Examples: "#DATA" -> #DATA 2 201 4 3 , "" -> "" 
+                   Structure of sweep info line if option '2': Nr = Number
+infoFmt actSweepNr NrOfSweepSteps NrOfDataColumns totalNrOfSweeps transposeFlag
+
+      sig1         The wildcard character * means extract all variables
+
+  The character 'list' after x is necessary and useful for complex data
+  only. It allows to select the type of output data: 'd'=dB, 'a'=abs, 'p'=
+  total phase, 'q'=quadrant phase(+/-pi), 'r'=real or 'c'=complex value
+  of the variables. You can freely choose any collection of data types. 
+  The chosen data formats apply to all variables except the frequency axis.
+  You can add an additional prefix 'i' to the 'list' to get an index from 0
+  to the number of data points minus one. 
+
+  Example: .TRAN simulation
+    Ltsputil.exe -xo0 my.raw plot.plt "%14.6e"  "," "" *
+          '0' Write only SPICE simulation data into the file.
+          '*' Write all variables to the file.
+
+  Example: .AC simulation
+    Ltsputil.exe -xdp my.raw plot.plt "%14.6e"  " " "" 0 3 4 7"
+         -xdp     : store d=dB and p=phase of all selected variables.
+         "%14.6e" : eng. format with 6 digit behind decimal point.
+         " "      : only one extra space after each column.
+         ""       : No meaning as long as option '2' is not given in nn.
+         0 3 4 7  : Select 0=frequency and variables with index 3 4 7.
+                    These numbers are listed in the raw file.
+                    You can also give exactly the name of the variables.
+  Example: .AC simulation, with variable names
+    Ltsputil.exe -xdp my.raw plot.plt "%14.6e" " " "" frequency V(out) V(in)
+
+  Example: .AC simulation, with variable names
+    Ltsputil.exe -xsdp my.raw plot.plt "%14.6e" " " "" frequency V(out) V(in)
+         Option 's' commands a new output file for every x-axis sweep.
+         Option nn assumed to be 3 if not given (see description above).
+
+  Example: .AC simulation, with variable names
+  Ltsputil.exe -xot1dp my.raw plot.plt "%14.6e" " " "" frequency V(out) V(in)
+         Option 't' formats sweeps to columns for every x-axis sweep.
+         Option '1' selects nn-mode 1. Plots signals in (d)B and (p)hase.
+
+  Example: .TRAN simulation
+    Ltsputil.exe -xo3 my.raw plot.plt "%14.6e"  "," "" 0 4 3
+         "," Means comma delimiter between columns.
+         'o' Overwrite existing output file.
+         '3' Write info head lines and info line before each sweep data run.
+
+  Example: .TRAN simulation
+    Ltsputil.exe -xo4 my.raw plot.plt "%14.6e"  "," "" 0 4 3
+          '4' Write automation info columns into the file.
+
+  Example: .TRAN simulation
+    Ltsputil.exe -xo0 my.raw plot.plt "%14.6e"  "," "" 0 4 3
+          '0' Write only SPICE simulation data into the file.
+
+  The 'i' option is less useful.
+  Examples: with 'i' option
+    Ltsputil.exe -xidp my.raw plot.plt "%14.6e"  " " "" 0 3 4 7
+    Ltsputil.exe -xi my.raw plot.plt "%14.6e"  "" "" 0 4 3
+         The index of each simulated step will be printed into the
+         first column.
+
+
+    Example: Spice raw file with 3 sweeps
+    -------------------------------------
+ltsputil.exe -xo7d stepac.raw  stepac_exp.plt
+             "%14.6e"  ", "  "#SW"  0  1 V(out) 2
+
+       Info header if option '1':
+
+#Title: * F:\Programme\LTC\SwCADIII\examples\Educational\stepAC.asc
+#Date: Tue Jan 21 01:08:12  2003
+#Plotname: AC Analysis
+#Variables(d): frequency V(out) V(in) V(n008)
+#Ltsputil: -xo5d
+#DataColumns: 4
+#InfoLines: 14
+#DataRows: 603
+#SimSteps: 603
+#Sweeps: 3
+#SweepDef: 1 201
+#SweepDef: 2 201
+#SweepDef: 3 201
+#Values:
+
+       Automation header if option '4':
+
+4,     0,   0                        <- Number of data columns
+11,    0,   0                        <- Number of info rows(lines
+603,   0,   0                        <- Number of data rows
+603,   0,   0                        <- Number of sim. steps in raw file
+3,     0,   0                        <- Number of defined sweeps
+1,     0,   0                        <- Sweep number 1
+201,   0,   0                        <- Number of sweep steps in run-1
+2,     0,   0                        <- Sweep number 2
+201,   0,   0                        <- Number of sweep steps in run-2
+3,     0,   0                        <- Sweep number 3
+201,   0,   0                        <- Number of sweep steps in run-3
+
+       Exported data from rawfile: Frequency, V(out), V(in), V(in)
+
+#SW 1 201 4 3 0                      <- Sweep info if option '2', 1st run.
+5.000000e+006, -3.164250e+001, -1.075981e+001, , -1.075981e+001
+5.017359e+006, -3.145187e+001, -1.067875e+001, -1.075981e+001
+5.034778e+006, -3.125998e+001, -1.059704e+001, -1.075981e+001
+5.052257e+006, -3.106682e+001, -1.051467e+001, -1.075981e+001
+............., .............., .............., ..............
+............., .............., .............., ..............
+............., .............., .............., ..............
+#SW 2 201 4 3 0                      <- Sweep info if option '2', 2nd run.
+5.000000e+006, -3.164250e+001, -1.075981e+001, -1.075981e+001
+5.017359e+006, -3.145187e+001, -1.067875e+001, -1.075981e+001
+5.034778e+006, -3.125998e+001, -1.059704e+001, -1.075981e+001
+5.052257e+006, -3.106682e+001, -1.051467e+001, -1.075981e+001
+............., .............., .............., ..............
+............., .............., .............., ..............
+............., .............., .............., ..............
+#SW 3 201 4 3 0                       <- Sweep info if option '2', 3rd run.
+5.000000e+006, -3.164250e+001, -1.075981e+001, -1.075981e+001
+5.017359e+006, -3.145187e+001, -1.067875e+001, -1.075981e+001
+5.034778e+006, -3.125998e+001, -1.059704e+001, -1.075981e+001
+5.052257e+006, -3.106682e+001, -1.051467e+001, -1.075981e+001
+............., .............., .............., ..............
+............., .............., .............., ..............
+............., .............., .............., ..............
+
+
+
+
+  Conversion of tabulated data to binary/ASCII raw file file format.
+  -----------------------------------------------------------------
+  It converts and copies a text data file to either an ASCII-data file
+  or a binary data file in raw format. The data can be then viewed
+  with LTSPICE like a normal simulation result. The output file
+  can be also used for further processing, e.g. for Merge or NMerge.
+  Parameter sweepNo duplicates the data multiple times. This can
+  be convenient for stepped parameter simulation, if you only need
+  the same data for every sweep.
+  An offset can be added to the x-axis numbers. This option is 
+  required if negative time data is in the input file.
+  The source file have to contain a standard raw file header
+  followed by the data table. This table is then converted to
+  the raw file format in the destination file. The header of the
+  input file will become the header of the output raw-file.
+
+  Usage
+    Ltsputil.exe -t[o][a|b|][z] source dest [sweepNo] ..
+          Option 'o'   : Overwrite an existing output file.
+          Option 'a|b' : Output data format is 'a'SCII or 'b'inary.
+                         If none of these two options is given,
+                         output data format is binary.
+          Option 'z'   : Add x-axis offset to x-axis, zero offset.
+                         The value is in the header behind 'Offset:'
+          sweepNo      : Number of sweeps with the same data
+                         Default is 1 if no number is given
+
+
+  Example
+	Ltsputil.exe -toa limits.txt limits.raw 
+	        Option -o overwrite, -a ASCII 
+
+
+The input file must have the standard header of a raw-file starting
+with the line 'Title ...' and ending with the line 'Values:'
+
+The number behind 'Offset:' is used with the 'z'-option.
+The data is in the lines following the line 'Values:'.
+Data for generating .AC raw-files has to be in real,imag format.
+
+Some examples of input files are below.
+
+
+Transient Analysis
+------------------
+
+Title: * C:\LTSPICE\circuits\generator\test1.asc
+Date: Sun Jan 28 12:08:17 2007
+Plotname: Transient Analysis
+Flags: real forward
+No. Variables: 4
+No. Points:    2000
+Offset:   0.0000000000000000e+000
+Command: Linear Technology Corporation LTspice
+Variables:
+ 0 time time
+ 1 V(in)   voltage
+ 2 V(out)  voltage
+ 3 I(R1)   device_current
+Values:	
+ 0.000000e+000 0.000000e+000 0.000000e+000 0.000000e+000
+ 1.198373e-003 7.530538e-003 6.235998e-005 7.468177e-008
+ 2.396745e-003 1.505872e-002 2.273675e-004 1.483135e-007
+   ....
+
+
+DC-Sweep
+--------
+
+Title: * C:\LTSPICE\circuits\generator\test1.asc
+Date: Sun Jan 28 12:17:39 2007
+Plotname: DC transfer characteristic
+Flags: real forward
+No. Variables: 3
+No. Points:       1000
+Offset:   0.0000000000000000e+000
+Command: Linear Technology Corporation LTspice
+Variables:
+ 0   v1      voltage
+ 1   V(out)  voltage
+ 2   I(R1)   device_current
+Values:
+ 5.000000e-001 3.021287e-001 1.978713e-006
+ 1.000000e+000 3.556208e-001 6.444044e-006
+ 1.500000e+000 3.806172e-001 1.119386e-005
+....
+
+
+AC Analysis: data pairs of real_value,imag_value
+------------------------------------------------
+
+Title: * C:\LTSPICE\circuits\generator\test1.asc
+Date: Sun Jan 28 12:24:11 2007
+Plotname: AC Analysis
+Flags: complex forward log
+No. Variables: 3
+No. Points:           1000
+Offset:   0.0000000000000000e+000;
+Command: Linear Technology Corporation LTspice
+Variables:
+ 0 frequency  frequency
+ 1 V(out)     voltage
+ 2 I(R1)      device_current
+Values:
+ 1.00000e-001 9.90602e-001, -6.18974e-002 9.39800e-008, 6.18974e-007
+ 1.25893e-001 9.88354e-001, -7.77473e-002 1.16462e-007, 7.77473e-007
+ 1.58489e-001 9.84811e-001, -9.75273e-002 1.51886e-007, 9.75273e-007
+....
+
+
+
+
+  Help
+  ----
+
+  Usage:
+    Ltsputil.exe -h[]
+       []   : The command character  a|c|e|h|i|m|n|t|x|z
+
+      -ha   : About this program.
+      -hc   : Convert binary to ASCII.
+      -he   : Equalize step size.
+      -hh   : Just this message.
+      -hi   : Info about a raw file.
+      -hm   : Merge two raw files.
+      -hn   : NMerge two raw files.
+      -ht   : Convert text file to raw data file.
+      -hx   : Export data.
+      -hz   : ltsputil -hz >> help.txt   Prints all help to file

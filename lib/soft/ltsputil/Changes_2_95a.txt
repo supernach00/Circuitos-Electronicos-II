@@ -1,0 +1,166 @@
+* V2.95a  06. Oct 2010
+* Text to raw-file was limited to 35 signals. Now it's about 140.
+*
+* Special Linker setting, Link->Output Stack allocation, Reserve: 0x100000
+*
+* V2.95   15. Nov 2009
+* FileReadLineLonglong FileReadLineLong(FILE *file, char buf[]) // buf[100002]
+(Temporary file extension changed to .tmp  
+*
+* V2.94   19. Feb 2009
+* Temporary files have now the extension .tmp
+*
+* V2.93   18. Jan 2009
+* Max. string length increased to 500 to allow longer backanno-lines.
+*
+* V2.92   09. Nov 2008
+* Max. number of info-lines changed from 100000 to 2000000
+* 
+* V2.91   07. Sep 2008
+* n,m-command, fixed a problem with one extra space character 
+* in front of the first variable entry in the output file
+* Tabs used as delimiters for Variables' list in -c, -e, -n, -m, -t mode
+
+* V2.9  18. Nov 2007
+* m-command, fixed a problem in VarNumReplace()
+* m-command, fixed crash with trace names without (), e.g. Iphk 
+* x-command, output line width in (t)ranspose mode 
+*            extended from 200 to 32000 characters.
+
+Date 26 Jan. 2007
+
+Changes V2.8
+Bug fix for "ltsputil -tob". The data files were wrong in some cases.
+The 'b'(binary) option now generates correct raw-data files.
+
+New feature added to the '-t' command. '-t' converts data tables to a raw file.
+The z-option for this command allows adding an "offset"-value to the
+x-axis data. This maybe helpful if time-data requires an offset to make
+it all positive numbers. 
+
+
+Date 2. Aug. 2006
+
+Changes V2.7
+New feature to extract all variables with wildcard *. 
+ltsputil.exe -xo out032.raw plot.txt "%%14.6e" ", " "" *
+
+
+
+Date 6. Jan 2005
+
+Changes of ltsputil.exe from Version 2.6 to 2.01
+
+New feature: Supports double precision raw files
+	     See LTSPICE Help->LTspice->Dot Commands->.Options numdgt
+
+New feature: -t Text data file to raw file
+             Converts a tabulated data file to a raw file.
+             This allows using LTSPICE as a data viewer.
+
+New feature: -n NMerge, generates only data for time/frequency steps 
+             contained in the first file. This helps to reduce 
+             the size of data files especially with .TRAN simulations.
+
+Bug regarding Merge of files with different number of variables fixed.
+             The variables of the second file were wrongly numbered 
+             if the number of variables were different. 
+ 
+
+
+Date 26. Sept 2004
+	Changes of LTSputil.exe from Version 2.0 to 2.01
+	Merging .NOISE files now possible
+
+
+Date 6. April 2003 
+
+    Changes of LTSputil.exe from Version 1.0 to 2.0
+
+    General options for output files: 
+	---------------------------------
+	'o'   Output files are no longer overwritten. 
+          Overwrite option 'o' can be used to overwrite automatically.
+
+    'a|b' Default output format is now binary for compatibility reason,
+		  if no parameter given. 'a'=ASCII, 'b'=binary output
+
+    'v'   Vector interpolation is now default for .AC simulations. 
+	'l'   Linear interpolation can be forced for .AC runs.
+	      Linear interpolation is always used for any non .AC data 
+		  regardless what type is chosen.
+
+
+
+   File conversion -c :
+   --------------------
+    's'   Parameter swept raw file will be divided into separate raw files.
+   
+	'z'   Remove x-axis offset (plot start). This means the offset of
+		  the simulation is added to the x-axis. 
+  
+
+
+   Equalizing x-axis steps  -e :
+   -----------------------------
+    -e start stop :
+          Now an x-axis start and stop value can be set for the output.
+	      The first/last y-value is used for any data outside the x-axis 
+	      of the input file.
+
+
+   Export raw file to data file -x : 
+   ---------------------------------
+     ltsputil.exe 
+       -x[o][s|t][nn][list] src dest varfmt delimfmt infofmt [sig1] [sig2] ..
+
+     Warning: One more parameter "infofmt" needed compared to version 1.0 .
+	 
+      Option 'o' : Overwrite an existing output file.
+	  Option 's' : Write each sweep into a different file.
+		           File name contains the sweep number
+		           Example: out.plt -> out1.plt, out2.plt ...
+		           Single swept output files have the greatest 
+flexibility.
+      Option 't' : A parameter swept raw file will be transposed to parallel
+                   columns. This requires that all sweeps must have the same
+                   number of x-axis steps. Thus all .TRAN raw files must be 
+                   preprocessed(equalized) with "ltsputil -e".
+                   Graphic programs give greater flexibility with sweep data
+                   organized in columns compared to sweep data in sequences.
+      Option nn 
+            none : The same as '1'.
+             '0' : Only data values in output file.
+             '1' : Additional #ASCII file info head lines in output file.
+             '2' : Additional info line before each sweep run in output file.
+             '3' : Option '1' + '2'.
+             '4' : Additional automation info headlines with exactly the same
+                   number of columns like the data rows. The info is in the
+                   same order as in option '1'.
+             '5' : Option '1' + '4' .
+             '6' : Option '2' + '4' .
+             '7' : Option '1' + '2' + '4' .
+                   Options for easiest file import of swept files:
+                     The most convenient options are 's' or 't' in most cases.
+                     Other useful options are depending on the graphic program.
+                     DPLOT 0,(1)  GNUPLOT 0,1,(2)  ORIGIN 0,(1),(2)
+                     EXCEL, MATLAB, MATHCAD, SCILAB : 0 or 4
+      list       : Optional 'i' for index followed by any combination of
+                   'd|a|p|q|r|c' characters
+                   Default is 'rc' for complex data if list is empty.
+                   d=dB, a=abs, p=phase, q=phase +/-pi, r=real, c=complex,
+      src        : name of the input raw file
+      dest       : name of the output file
+      varfmt     : C-syntax printf() format string for the data
+                   Example: Floating point 7 digits resolution -> "%15.7e"
+                   Always specify >=8 char. more as precision. 15 = 7 + 8
+                   This ensures exact column format if option '4' is used.
+      delimfmt   : C-syntax printf() format string for the column
+                   delimiter, e.g "," for a ',' delimiter
+      infofmt    : The info line starts with this string. It precedes each
+                   sweep data set if option '2' is set.
+                   Only an empty line is written if infofmt is empty "".
+                   Examples: "#DATA" -> #DATA 2 201 4 3 , "" -> "" 
+                   Structure of sweep info line if option '2': Nr = Number
+infoFmt actSweepNr NrOfSweepSteps NrOfDataColumns totalNrOfSweeps transposeFlag
+

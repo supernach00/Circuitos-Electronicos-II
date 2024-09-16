@@ -1,0 +1,53 @@
+.SUBCKT TUNNEL 1 20 
++ Vp=60mV Ip=50mA Vv=1.5V Iv=3mA Vpp=500mV  c=0.1pF L=0.1n m=1
+.param Vt={boltz*(TEMP+273.15)/echarge} 
+BTHE  1 2 I = {Ip}*exp(-{Vpp}/{Vt})*(exp(v(1,2)/{vt})-1)
+BTUN  1 2 I = {Ip}*((v(1,2)/{Vp})*exp(1-v(1,2)/{Vp}))**if(v(1,2)<Vp,1,m)
+BEXC  1 2 I = {Iv}*exp(v(1,2)-{Vv})*(1-exp(-v(1,2)/vt))
+C 1 2 {c}
+L 20 2 {L} Rpar=5
+.ENDS TUNNEL
+
+.SUBCKT 3I306G 1 20 
+x 1 20 tunnel Vp=170mV Ip=2.mA Vv=1V Iv=0.1mA Vpp=500mV  c=8pF L=0.1n m=5
+.ends
+
+.SUBCKT 3I306E 1 20 
+x 1 20 tunnel Vp=170mV Ip=2.mA Vv=1V Iv=0.1mA Vpp=500mV  c=7pF L=0.1n m=5
+.ends
+
+.SUBCKT 3I306j 1 20 
+x 1 20 tunnel Vp=170mV Ip=5.mA Vv=1V Iv=0.2mA Vpp=500mV  c=15pF L=0.1n m=3
+.ends
+
+.SUBCKT 3I306k 1 20 
+x 1 20 tunnel Vp=170mV Ip=5.mA Vv=1V Iv=0.2mA Vpp=500mV  c=14pF L=0.1n m=3
+.ends
+
+.SUBCKT 3I306L 1 20 
+x 1 20 tunnel Vp=170mV Ip=10mA Vv=1V Iv=0.4mA Vpp=503mV  c=12pF L=0.1n m=3
+.ends
+
+.SUBCKT 3I306M 1 20 
+x 1 20 tunnel Vp=170mV Ip=10mA Vv=1V Iv=0.4mA Vpp=503mV  c=30pF L=0.1n m=3
+.ends
+
+.SUBCKT 3I306N 1 20 
+x 1 20 tunnel Vp=170mV Ip=10mA Vv=1V Iv=0.4mA Vpp=503mV  c=30pF L=0.1n m=3
+.ends
+
+.SUBCKT 1N3712 1 20 
+x 1 20 tunnel Vp=65mV Ip=0.93mA Vv=2 Iv=0.5mA Vpp=500mV  c=5pF L=0.5n m=1.7
+.ends
+
+.SUBCKT 1N3713 1 20 
+x 1 20 tunnel Vp=65mV Ip=1mA Vv=2 Iv=0.4mA Vpp=510mV  c=3.5pF L=0.5n m=1.65
+.ends
+
+.SUBCKT 1N3714 1 20 
+x 1 20 tunnel Vp=65mV Ip=2mA Vv=2 Iv=1.3mA Vpp=500mV  c=10pF L=0.5n m=1.7
+.ends
+
+.SUBCKT 1N3715 1 20 
+x 1 20 tunnel Vp=65mV Ip=2mA Vv=2 Iv=1mA Vpp=510mV  c=7pF L=0.5n m=1.65
+.ends

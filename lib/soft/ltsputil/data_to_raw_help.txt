@@ -1,0 +1,113 @@
+ Conversion of tabulated data to binary/ASCII raw file file format.
+  -----------------------------------------------------------------
+  It converts and copies a text data file to either an ASCII-data file
+  or a binary data file in raw format. The data can be then viewed
+  with LTSPICE like a normal simulation result. The output file
+  can be also used for further processing, e.g. for Merge or NMerge.
+  Parameter sweepNo duplicates the data multiple times. This can
+  be convenient for stepped parameter simulation, if you only need
+  the same data for every sweep.
+  An offset can be added to the x-axis numbers. This option is 
+  required if negative time data is in the input file.
+  The source file have to contain a standard raw file header
+  followed by the data table. This table is then converted to
+  the raw file format in the destination file. The header of the
+  input file will become the header of the output raw-file.
+
+  Usage
+    Ltsputil.exe -t[o][a|b|][z] source dest [sweepNo] ..
+          Option 'o'   : Overwrite an existing output file.
+          Option 'a|b' : Output data format is 'a'SCII or 'b'inary.
+                         If none of these two options is given,
+                         output data format is binary.
+          Option 'z'   : Add x-axis offset to x-axis, zero offset.
+                         The value is in the header behind 'Offset:'
+          sweepNo      : Number of sweeps with the same data
+                         Default is 1 if no number is given
+
+
+  Example
+	Ltsputil.exe -toa limits.txt limits.raw 
+	        Option -o overwrite, -a ASCII 
+
+The input file must have the standard header of a raw-file starting
+with the line 'Title ...' and ending with the line 'Values:'
+
+The number behind 'Offset:' is used with the 'z'-option.
+The data is in the lines following the line 'Values:'.
+Data for generating .AC raw-files has to be in real,imag format.
+
+
+Example for a .TRAN data file 
+-----------------------------
+
+Title: * D:\Daten\table_2_tran.txt
+Date: Wed Jan 01 19:30:00 2005
+Plotname: Transient Analysis
+Flags: real forward 
+No. Variables: 3
+No. Points:          8
+Offset:   0.0000000000000000e+000
+Command: Linear Technology Corporation LTspice
+Variables:
+	0	time	time
+	1	V(limit1)	voltage
+	2	V(limit2)	voltage
+Values:
+0		0.5	-0.2	
+10e-9		0.5	-0.2
+11e-9		6	-0.2
+14e-9		6	-0.2
+15e-9		6	-0.2
+21e-9		6	4
+35e-9		5.5	4.5
+50e-9		5.5	4.5	
+
+
+
+Example for a .AC data file
+---------------------------
+
+Title: * D:\Daten\table_2_ac.txt
+Date: Wed Jan 01 19:30:00 2005
+Plotname: AC Analysis
+Flags: complex forward log 
+No. Variables: 3
+No. Points: 8
+Offset:   0.0000000000000000e+000
+Command: Linear Technology Corporation LTspice
+Variables:
+ 0 frequency frequency
+ 1 V(max) voltage
+ 2 V(min) voltage
+Values:
+1e6   		1.05,0     0.95,0    
+10e6   		1.05,0     0.95,0    
+20e6	  	1.1,0      0.9,0     
+40e6	  	1.15,0     0.9,0     
+60e6	   	1.15,0     0.8,0      
+80e6  		1,0        0.6,0   
+100e6      	0.7,0      0.3,0    
+200e6      	0.4,0      0.05,0    
+	
+
+Example for a .DC data file
+---------------------------
+
+Title: * D:\Daten\Test.txt
+Date: Wed Jan 01 19:30:00 2005
+Plotname: DC transfer characteristic
+Flags: real forward  
+No. Variables: 3
+No. Points:        4
+Offset:   0.0000000000000000e+000
+Command: Linear Technology Corporation LTspice
+Variables:
+	0	v1	voltage
+	1	V(n001)	voltage
+	2	I(V1)	device_current
+Values:
+2     1       1.3e-3
+5     2.1     1.5e-3
+6     3.0     2.1e-3
+7     4.1     4.56e-3
