@@ -1,0 +1,55 @@
+Circuit: * D:\INGEÑERIA\Circuitos Electronicos II\resoluciones\tp2\Draft3.asc
+
+Warning: Multiple definitions of model "2scr375p" Type: BJT
+Warning: Multiple definitions of model "bc857b" Type: BJT
+Warning: Multiple definitions of model "bc847c" Type: BJT
+Warning: Multiple definitions of model "bc847b" Type: BJT
+Direct Newton iteration for .op point succeeded.
+Semiconductor Device Operating Points:
+                        --- Diodes ---
+Name:      d2
+Model:   stz5_6n
+Id:     -2.15e-02
+Vd:     -5.63e+00
+Req:     3.62e-01
+CAP:     2.59e-07
+
+                        --- Bipolar Transistors ---
+Name:       q1          q2
+Model:      npn         npn
+Ib:       2.13e-04    2.07e-05
+Ic:       2.13e-02    2.07e-03
+Vbe:      8.53e-01    7.93e-01
+Vbc:     -1.56e+00   -1.19e+01
+Vce:      2.41e+00    1.27e+01
+BetaDC:   1.00e+02    1.00e+02
+Gm:       8.22e-01    8.02e-02
+Rpi:      1.22e+02    1.25e+03
+Rx:       0.00e+00    0.00e+00
+Ro:       4.05e+40    0.00e+00
+Cbe:      0.00e+00    0.00e+00
+Cbc:      0.00e+00    0.00e+00
+Cjs:      0.00e+00    0.00e+00
+BetaAC:   1.00e+02    1.00e+02
+Cbx:      0.00e+00    0.00e+00
+Ft:       0.00e+00    0.00e+00
+
+
+
+Date: Fri Sep  6 19:49:05 2024
+Total elapsed time: 0.039 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 21
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 8
+fillins = 0
+solver = Normal
+Avg thread counts: 6.0/0.0/6.0/6.0
+Matrix Compiler1: 558 bytes object code size
+Matrix Compiler2: 642 bytes object code size

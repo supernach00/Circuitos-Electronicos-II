@@ -1,0 +1,29 @@
+* D:\INGEÑERIA\Circuitos Electronicos II\resoluciones\Draft4.asc
+R1 0 N006 453
+R2 N006 N011 4700
+V1 0 N011 20
+XU1 N009 N006 N005 N010 N007 OP747
+V2 N005 NC_01 20
+V3 0 N010 20
+R3 N007 0 1k
+D1 N008 N007 D
+R4 N003 N008 1k
+R5 N002 N003 5k
+V4 N002 0 20
+Q1 N004 N008 N012 0 NPN
+R6 N012 0 4.7
+V5 N004 N001 12
+R7 N001 N009 22k
+R8 N009 0 4k7
+C1 N001 0 1µ
+C2 N001 0 47µ
+R9 N001 0 1234
+.model D D
+.lib C:\Users\nacho\AppData\Local\LTspice\lib\cmp\standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\nacho\AppData\Local\LTspice\lib\cmp\standard.bjt
+.tran 10
+.lib ADI.lib
+.backanno
+.end

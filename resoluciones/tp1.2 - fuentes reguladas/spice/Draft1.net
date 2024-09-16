@@ -1,0 +1,14 @@
+* D:\INGEÑERIA\Circuitos Electronicos II\resoluciones\tp2\Draft1.asc
+D1 0 N003 BZX84C10L
+Q1 N001 N003 N002 0 NPN
+R1 N001 N003 220
+R2 N001 0 3
+V1 N002 0 1
+.model D D
+.lib C:\Users\nacho\AppData\Local\LTspice\lib\cmp\standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\nacho\AppData\Local\LTspice\lib\cmp\standard.bjt
+.op
+.backanno
+.end
