@@ -1,0 +1,70 @@
+Circuit: * D:\INGEÑERIA\Circuitos Electronicos II\simulaciones\Draft4.asc
+
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-05
+Gmin = 1.6455e-06
+vernier = 0.5
+vernier = 0.25
+Gmin = 4.7763e-07
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+vernier = 0.015625
+Gmin = 4.68409e-07
+vernier = 0.0208333
+vernier = 0.0277778
+Gmin = 4.41638e-07
+vernier = 0.037037
+vernier = 0.0493827
+Gmin = 4.02144e-07
+vernier = 0.0658435
+Gmin = 3.47154e-07
+vernier = 0.0877914
+vernier = 0.117055
+Gmin = 2.71546e-07
+vernier = 0.156073
+vernier = 0.208098
+Gmin = 1.84077e-07
+vernier = 0.277464
+Gmin = 1.00493e-07
+vernier = 0.369952
+vernier = 0.493269
+Gmin = 3.71217e-08
+vernier = 0.657691
+vernier = 0.876922
+Gmin = 7.93939e-09
+vernier = 1
+Gmin = 9.41855e-10
+Gmin = 1.01131e-10
+Gmin = 1.08588e-11
+Gmin = 1.16596e-12
+Gmin = 1.25194e-13
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+Date: Wed Sep 18 18:24:11 2024
+Total elapsed time: 0.119 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3603
+traniter = 2082
+tranpoints = 1042
+accept = 1042
+rejected = 0
+matrix size = 40
+fillins = 32
+solver = Normal
+Avg thread counts: 1.2/1.4/1.4/1.2
+Matrix Compiler1: 7.71 KB object code size  1.6/0.9/[0.4]
+Matrix Compiler2: 5.24 KB object code size  0.5/0.6/[0.3]
+
