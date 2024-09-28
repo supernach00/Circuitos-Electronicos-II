@@ -1,0 +1,26 @@
+Circuit: * D:\INGEÑERIA\Circuitos Electronicos II\trabajos practicos\TeX\TP2 - Ampliaudio con bootstraping\simus\Draft1.asc
+
+c4: Increased Cpar to 4.7e-12
+c5: Increased Cpar to 2.2e-12
+c7: Increased Cpar to 4.7e-12
+c10: Increased Cpar to 1e-12
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Sep 26 17:43:57 2024
+Total elapsed time: 0.153 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2110
+traniter = 2082
+tranpoints = 1042
+accept = 1042
+rejected = 0
+matrix size = 39
+fillins = 27
+solver = Normal
+Avg thread counts: 1.2/1.4/1.4/1.2
+Matrix Compiler1: 4.86 KB object code size  1.1/0.7/[0.4]
+Matrix Compiler2: 4.04 KB object code size  0.4/0.8/[0.3]
+
