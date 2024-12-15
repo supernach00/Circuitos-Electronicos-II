@@ -1,0 +1,25 @@
+Circuit: * D:\INGEÑERIA\Circuitos Electronicos II\simulaciones\oscilador wien con bjts.asc
+
+Warning: Multiple definitions of model "bc558c" Type: BJT
+Warning: Multiple definitions of model "bc548c" Type: BJT
+WARNING: Less than two connections to node n006.  This node is used by v2.
+Direct Newton iteration for .op point succeeded.
+
+Date: Fri Nov 29 17:39:48 2024
+Total elapsed time: 0.270 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 14557
+traniter = 14542
+tranpoints = 5430
+accept = 3661
+rejected = 1769
+matrix size = 25
+fillins = 26
+solver = Normal
+Avg thread counts: 1.0/1.1/1.1/1.0
+Matrix Compiler1: 3.14 KB object code size  0.8/0.5/[0.3]
+Matrix Compiler2: 2.57 KB object code size  0.3/0.5/[0.2]
+

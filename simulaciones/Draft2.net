@@ -1,0 +1,16 @@
+* D:\INGEÑERIA\Circuitos Electronicos II\simulaciones\Draft2.asc
+V1 0 N002 12
+V2 N005 N003 0.7
+V3 N006 0 -12
+R1 N005 N006 3300
+R2 N005 0 10k
+R3 N003 N002 100k
+V4 N001 0 12
+R4 N004 N007 3300
+R5 N004 0 10k
+R6 N004 0 1k
+R7 N004 N001 100k
+V5 0 N007 12
+.op
+.backanno
+.end
