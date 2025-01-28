@@ -1,0 +1,24 @@
+Circuit: * D:\INGEÑERIA\Circuitos Electronicos II\simulaciones\Clase E FET.asc
+
+Limiting rise time of source v1 to 7.1428e-09
+Limiting fall time of source v1 to 7.1428e-09
+Direct Newton iteration for .op point succeeded.
+
+Date: Sat Jan 25 11:31:09 2025
+Total elapsed time: 0.066 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 5769
+traniter = 5766
+tranpoints = 2816
+accept = 2169
+rejected = 647
+matrix size = 7
+fillins = 0
+solver = Normal
+Avg thread counts: 1.1/1.1/1.1/1.1
+Matrix Compiler1: off  [0.1]/0.1/0.1
+Matrix Compiler2: off  [0.1]/0.1/0.1
+

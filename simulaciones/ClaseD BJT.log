@@ -1,0 +1,7 @@
+Circuit: * D:\INGEÑERIA\Circuitos Electronicos II\simulaciones\ClaseD BJT.asc
+
+Warning: Multiple definitions of model "bc558c" Type: BJT
+Warning: Multiple definitions of model "bc548c" Type: BJT
+Direct Newton iteration for .op point succeeded.
+Heightened Def Con from 1.43053e-05 ++++++++++++++++++++++++++++++++++++++++++++++++++Fatal Error: Analysis:  Time step too small; time = 1.43053e-05, timestep = 1.25e-19: trouble with npn-instance q2
+
