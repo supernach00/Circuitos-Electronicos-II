@@ -1,0 +1,21 @@
+Circuit: * D:\INGEÑERIA\Circuitos Electronicos II\Resoluciones ejercicios\Ejercicios resueltos de parciales - MOD 1\Sintonizado Simu (2da fecha 2024).asc
+
+.OP point found by inspection.
+
+Date: Mon Feb 17 16:35:00 2025
+Total elapsed time: 0.065 seconds.
+
+tnom = 27
+temp = 27
+method = trap
+totiter = 0
+traniter = 0
+tranpoints = 0
+accept = 0
+rejected = 0
+matrix size = 8
+fillins = 1
+solver = Normal
+Avg thread counts: 6.0/0.0/0.0/1.2
+Matrix Compiler1:      20 opcodes
+Matrix Compiler2:      45 opcodes

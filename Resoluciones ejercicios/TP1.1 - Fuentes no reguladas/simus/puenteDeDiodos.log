@@ -2,21 +2,21 @@ Circuit: * D:\INGEÑERIA\Circuitos Electronicos II\Resoluciones ejercicios\TP1.1 
 
 .OP point found by inspection.
 
-Date: Sun Feb  9 20:24:42 2025
-Total elapsed time: 0.077 seconds.
+Date: Fri Aug 22 10:06:24 2025
+Total elapsed time: 0.087 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 2475
-traniter = 2475
-tranpoints = 1098
-accept = 1091
-rejected = 7
-matrix size = 4
+totiter = 2450
+traniter = 2450
+tranpoints = 1077
+accept = 1066
+rejected = 11
+matrix size = 5
 fillins = 1
 solver = Normal
 Avg thread counts: 1.2/1.4/1.4/1.2
-Matrix Compiler1:      12 opcodes  0.1/[0.1]/0.1
-Matrix Compiler2: off  [0.0]/0.1/0.0
+Matrix Compiler1: 266 bytes object code size  0.2/0.2/[0.2]
+Matrix Compiler2: 375 bytes object code size  0.1/0.2/[0.1]
 
