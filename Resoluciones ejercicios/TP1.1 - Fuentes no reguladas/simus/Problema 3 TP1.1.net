@@ -1,13 +1,13 @@
 * D:\INGEÑERIA\Circuitos Electronicos II\Resoluciones ejercicios\TP1.1 - Fuentes no reguladas\simus\Problema 3 TP1.1.asc
 V1 N001 0 SINE(0 311.12 50)
-D1 N001 N001 D
-D2 N002 N003 D
-D3 N004 0 D
-D4 0 N003 D
-D5 N004 N002 D
-R§M N004 N003 100
-RM N001 N002 633.3
-RH N001 0 24.2
+D1 N001 N002 D
+D2 N003 N004 D
+D3 N005 0 D
+D4 0 N004 D
+D5 N005 N003 D
+R§M N005 N004 100
+RM N002 N003 633.3
+RH N002 0 24.2
 .model D D
 .lib C:\Users\nacho\AppData\Local\LTspice\lib\cmp\standard.dio
 .tran .1
