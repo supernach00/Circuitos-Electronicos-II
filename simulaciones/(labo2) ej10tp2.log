@@ -1,7 +1,11 @@
-Circuit: * D:\INGEÑERIA\Circuitos Electronicos II\simulaciones\(labo2) ej10tp2.asc
+Circuit: * D:\INGEÑERIA\Circuitos Electronicos II\Simulaciones\(labo2) ej10tp2.asc
 
 Warning: Multiple definitions of model "bc558c" Type: BJT
 Warning: Multiple definitions of model "bc548c" Type: BJT
+WARNING: Node NC_01 is floating.
+
+WARNING: Less than two connections to node nc_01.  This node is used by c4.
+WARNING: Less than two connections to node n012.  This node is used by v1.
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
 Gmin = 10
@@ -35,21 +39,21 @@ Ignoring empty pin current: Ix(u1:vout-)
 Ignoring empty pin current: Ix(u2:a)
 Ignoring empty pin current: Ix(u2:c)
 
-Date: Thu Oct 24 18:21:16 2024
-Total elapsed time: 0.290 seconds.
+Date: Sun Feb 16 19:26:45 2025
+Total elapsed time: 0.347 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 5627
-traniter = 5135
-tranpoints = 2011
-accept = 1655
-rejected = 356
+totiter = 2560
+traniter = 2082
+tranpoints = 1042
+accept = 1042
+rejected = 0
 matrix size = 56
-fillins = 48
+fillins = 40
 solver = Normal
-Avg thread counts: 1.1/1.2/1.2/1.1
-Matrix Compiler1: 7.19 KB object code size  1.5/1.5/[0.6]
-Matrix Compiler2: 5.94 KB object code size  0.7/1.0/[0.5]
+Avg thread counts: 1.2/1.4/1.4/1.2
+Matrix Compiler1: 6.79 KB object code size  1.7/1.4/[0.6]
+Matrix Compiler2: 5.76 KB object code size  3.7/3.0/[0.4]
 
