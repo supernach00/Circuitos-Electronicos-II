@@ -1,0 +1,19 @@
+* D:\INGEÑERIA\Circuitos Electronicos II\Resoluciones ejercicios\TP2 - Amplis de audio\Simus\Problema 2 TP2.asc
+V1 N002 0 SINE(0 5 2k)
+R1 N001 N004 5600
+R2 N004 0 820
+R3 0 N006 75
+Rg N003 N002 10
+RL 0 N005 200
+Q1 N006 N006 N007 0 BC337-25
+Q2 N005 N006 N007 0 BC337-25
+Q3 N001 N004 N005 0 BC337-25
+C1 N004 N003 10µ
+V2 N001 0 5
+V3 0 N007 5
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\nacho\AppData\Local\LTspice\lib\cmp\standard.bjt
+.tran .010
+.backanno
+.end

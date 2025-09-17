@@ -1,0 +1,24 @@
+Circuit: * D:\INGEÑERIA\Circuitos Electronicos II\Resoluciones ejercicios\TP2 - Amplis de audio\Simus\Problema 2 TP2.asc
+
+Warning: Multiple definitions of model "bc558c" Type: BJT
+Warning: Multiple definitions of model "bc548c" Type: BJT
+Direct Newton iteration for .op point succeeded.
+
+Date: Mon Sep 15 18:08:36 2025
+Total elapsed time: 0.119 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 5235
+traniter = 5230
+tranpoints = 2145
+accept = 1713
+rejected = 432
+matrix size = 19
+fillins = 0
+solver = Normal
+Avg thread counts: 1.1/1.2/1.2/1.1
+Matrix Compiler1: 1.25 KB object code size  0.3/0.4/[0.2]
+Matrix Compiler2: 1.55 KB object code size  0.3/0.5/[0.2]
+
