@@ -1,4 +1,4 @@
-Circuit: * D:\INGEÑERIA\Circuitos Electronicos II\Simulaciones\ej4tp2.asc
+Circuit: * D:\INGEÑERIA\Circuitos Electronicos II\Resoluciones ejercicios\TP2 - Amplis de audio\Simus\ej4tp2.asc
 
 Warning: Multiple definitions of model "bc558c" Type: BJT
 Warning: Multiple definitions of model "bc548c" Type: BJT
@@ -16,21 +16,21 @@ Ignoring empty pin current: Ix(u1:vout-)
 Ignoring empty pin current: Ix(u2:a)
 Ignoring empty pin current: Ix(u2:c)
 
-Date: Sat Sep 27 15:53:54 2025
-Total elapsed time: 0.119 seconds.
+Date: Tue Sep 30 20:40:06 2025
+Total elapsed time: 0.139 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 2170
-traniter = 2160
-tranpoints = 1060
-accept = 1058
-rejected = 2
+totiter = 5319
+traniter = 5309
+tranpoints = 2165
+accept = 1702
+rejected = 463
 matrix size = 33
-fillins = 25
+fillins = 26
 solver = Normal
-Avg thread counts: 1.2/1.4/1.4/1.2
-Matrix Compiler1: 3.87 KB object code size  0.9/0.8/[0.3]
-Matrix Compiler2: 3.48 KB object code size  0.5/0.8/[0.2]
+Avg thread counts: 1.1/1.2/1.2/1.1
+Matrix Compiler1: 3.92 KB object code size  1.0/0.9/[0.3]
+Matrix Compiler2: 3.48 KB object code size  0.5/0.9/[0.3]
 
