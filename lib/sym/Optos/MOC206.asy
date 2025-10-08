@@ -25,8 +25,8 @@ LINE Normal 20 -36 24 -32
 RECTANGLE Normal -96 -80 96 48
 ARC Normal -4 -20 20 -44 16 -36 -4 -32
 ARC Normal -28 -20 -4 -44 -28 -28 -4 -32
-WINDOW 0 0 -96 Center 0
-WINDOW 3 0 64 Center 0
+WINDOW 0 0 -96 Center 2
+WINDOW 3 0 64 Center 2
 SYMATTR Value MOC206
 SYMATTR Prefix X
 SYMATTR SpiceModel MOC205.sub

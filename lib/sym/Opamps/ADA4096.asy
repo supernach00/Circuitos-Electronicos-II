@@ -11,13 +11,13 @@ LINE Normal 0 96 0 80
 LINE Normal 4 44 12 44
 LINE Normal 8 40 8 48
 LINE Normal 4 84 12 84
-WINDOW 0 16 32 Left 0
-WINDOW 3 16 96 Left 0
+WINDOW 0 16 32 Left 2
+WINDOW 3 16 96 Left 2
 SYMATTR Value ADA4096
 SYMATTR Prefix X
-SYMATTR SpiceModel ADI.lib
+SYMATTR SpiceModel ADA4096.lib
 SYMATTR Value2 ADA4096
-SYMATTR Description 3/30V BIP OP OVP RRIO
+SYMATTR Description 30 V, Micropower, Overvoltage Protection, Rail-to-Rail Input/Output Amplifiers
 PIN -32 80 NONE 0
 PINATTR PinName In+
 PINATTR SpiceOrder 1

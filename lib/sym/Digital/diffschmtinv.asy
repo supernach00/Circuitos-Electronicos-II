@@ -12,8 +12,8 @@ LINE Normal 4 48 12 48
 LINE Normal 8 44 8 52
 LINE Normal 4 80 12 80
 CIRCLE Normal 60 72 44 56
-WINDOW 0 8 16 Left 0
-WINDOW 3 8 120 Left 0
+WINDOW 0 8 16 Left 2
+WINDOW 3 8 120 Left 2
 SYMATTR Prefix A
 SYMATTR SpiceModel SCHMITT
 SYMATTR Description Behavioral Schmitt-Triggered Inverter with Differential Input

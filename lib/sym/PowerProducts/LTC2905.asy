@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal 128 128 -128 -127
-TEXT 0 0 Center 0 LT
-WINDOW 0 0 -64 Center 0
-WINDOW 3 0 64 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 0 -64 Center 2
+WINDOW 3 0 64 Center 2
 SYMATTR Value LTC2905
 SYMATTR Prefix X
 SYMATTR Description Precision Dual Supply Monitor with Pin-Selectable Thresholds

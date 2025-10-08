@@ -15,8 +15,8 @@ LINE Normal -3 23 -3 12
 LINE Normal -3 12 3 12
 LINE Normal 0 -29 0 -48
 LINE Normal 0 29 0 48
-WINDOW 0 32 -40 Left 0
-WINDOW 3 32 40 Left 0
+WINDOW 0 32 -40 Left 2
+WINDOW 3 32 40 Left 2
 SYMATTR Value LTC6702
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC3.lib

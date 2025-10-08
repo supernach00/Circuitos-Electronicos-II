@@ -10,7 +10,7 @@ SYMATTR SpiceModel LTC4368-2.sub
 SYMATTR Value2 LTC4368-2
 SYMATTR Description 100V Overvoltage, Overcurrent and Reverse Supply Protection Controller
 PIN -160 -144 LEFT 8
-PINATTR PinName VIN
+PINATTR PinName Vin
 PINATTR SpiceOrder 1
 PIN -160 48 LEFT 8
 PINATTR PinName UV
@@ -31,7 +31,7 @@ PIN 160 -64 RIGHT 8
 PINATTR PinName _FAULT
 PINATTR SpiceOrder 7
 PIN 96 -208 TOP 8
-PINATTR PinName VOUT
+PINATTR PinName Vout
 PINATTR SpiceOrder 8
 PIN 0 -208 TOP 8
 PINATTR PinName SENSE

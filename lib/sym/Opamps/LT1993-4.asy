@@ -142,21 +142,21 @@ CIRCLE Normal 127 51 121 45
 CIRCLE Normal 65 81 63 79
 CIRCLE Normal 66 82 62 78
 CIRCLE Normal 67 83 61 77
-TEXT -21 -81 Center 0 A
-TEXT -21 80 Center 0 B
-TEXT 26 1 Center 0 C
-TEXT -173 -110 Left 0 -A
-TEXT -173 -78 Left 0 -B
-TEXT -173 77 Left 0 +A
-TEXT -173 110 Left 0 +B
-TEXT 174 -91 Right 0 +
-TEXT 171 89 Right 0 -
-TEXT 175 -15 Right 0 CM
-WINDOW 3 112 192 Left 0
-WINDOW 0 144 -192 Left 0
+TEXT -21 -81 Center 2 A
+TEXT -21 80 Center 2 B
+TEXT 26 1 Center 2 C
+TEXT -173 -110 Left 2 -A
+TEXT -173 -78 Left 2 -B
+TEXT -173 77 Left 2 +A
+TEXT -173 110 Left 2 +B
+TEXT 174 -91 Right 2 +
+TEXT 171 89 Right 2 -
+TEXT 175 -15 Right 2 CM
+WINDOW 3 112 192 Left 2
+WINDOW 0 144 -192 Left 2
 SYMATTR Value LT1993-4
 SYMATTR Prefix X
-SYMATTR SpiceModel LTC3.LIB
+SYMATTR SpiceModel LTC3.lib
 SYMATTR Value2 LT1993-4
 SYMATTR Description 900MHz Low Distortion, Low Noise Differential Amplifier and ADC Driver
 PIN 48 -176 TOP 4

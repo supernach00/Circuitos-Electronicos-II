@@ -13,8 +13,8 @@ LINE Normal 40 32 56 20
 LINE Normal 48 44 64 32
 LINE Normal 40 32 56 40
 LINE Normal 56 20 56 40
-WINDOW 0 72 32 Left 0
-WINDOW 3 72 68 Left 0
+WINDOW 0 72 32 Left 2
+WINDOW 3 72 68 Left 2
 SYMATTR Value PNP
 SYMATTR Prefix QP
 SYMATTR Description Bipolar PNP transistor with substrate node.  You would normally use this with your own .model statement.

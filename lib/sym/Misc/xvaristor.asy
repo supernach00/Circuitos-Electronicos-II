@@ -9,8 +9,8 @@ LINE Normal 0 24 32 84
 LINE Normal 32 92 32 84
 LINE Normal 24 80 24 32
 LINE Normal 8 80 24 80
-WINDOW 0 36 40 Left 0
-WINDOW 3 36 76 Left 0
+WINDOW 0 36 40 Left 2
+WINDOW 3 36 76 Left 2
 SYMATTR Value varistor
 SYMATTR Prefix X
 SYMATTR Description Generic varistor symbol for use with a model that you supply.

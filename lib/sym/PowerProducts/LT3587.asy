@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal 272 320 -272 -272
-TEXT 0 0 Center 0 LT
-WINDOW 0 -1 -151 Center 0
-WINDOW 3 0 136 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 -1 -151 Center 2
+WINDOW 3 0 136 Center 2
 SYMATTR Value LT3587
 SYMATTR Prefix X
 SYMATTR Description High Voltage Monolithic Inverter and Dual Boost

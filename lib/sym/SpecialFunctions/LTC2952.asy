@@ -1,14 +1,14 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal 208 368 -208 -304
-TEXT 0 32 Center 0 LT
-WINDOW 0 0 -128 Center 0
-WINDOW 3 0 192 Center 0
+TEXT 0 32 Center 2 LT
+WINDOW 0 0 -128 Center 2
+WINDOW 3 0 192 Center 2
 SYMATTR Value LTC2952
 SYMATTR Prefix X
 SYMATTR Description Dual Ideal Diode Push Button Power Path Controller with Supervisor
-SYMATTR SpiceModel LTC2952
-SYMATTR ModelFile LTC2952.sub
+SYMATTR SpiceModel LTC2952.sub
+SYMATTR Value2 LTC2952
 PIN 208 -96 RIGHT 8
 PINATTR PinName VM
 PINATTR SpiceOrder 1

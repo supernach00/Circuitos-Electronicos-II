@@ -1,9 +1,9 @@
 Version 4
 SymbolType BLOCK
 RECTANGLE Normal 111 160 -111 -176
-TEXT 0 0 Left 0 LT
-WINDOW 3 1 73 Center 0
-WINDOW 0 0 -96 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 3 1 73 Center 2
+WINDOW 0 0 -96 Center 2
 SYMATTR Value LT6600-10
 SYMATTR Prefix X
 SYMATTR SpiceModel LT6600-10.sub

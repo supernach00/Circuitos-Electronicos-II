@@ -6,8 +6,8 @@ LINE Normal 8 12 8 20
 LINE Normal 4 16 12 16
 LINE Normal 0 28 32 28
 ARC Normal -16 36 48 100 32 40 0 40
-WINDOW 0 24 8 Left 0
-WINDOW 3 24 57 Left 0
+WINDOW 0 24 8 Left 2
+WINDOW 3 24 57 Left 2
 SYMATTR Value C
 SYMATTR Prefix C
 SYMATTR Description Polarized Capacitor

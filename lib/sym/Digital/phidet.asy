@@ -14,8 +14,8 @@ LINE Normal -4 16 28 -16
 CIRCLE Normal -12 -24 36 24
 CIRCLE Normal 80 12 56 -12
 CIRCLE Normal 96 12 72 -12
-WINDOW 0 8 -64 Center 0
-WINDOW 3 0 64 Left 0
+WINDOW 0 8 -64 Center 2
+WINDOW 3 0 64 Left 2
 SYMATTR Prefix A
 SYMATTR SpiceModel PHASEDET
 SYMATTR Description Behavioral Type 3/4 Phase Detector (phase/frequency detector).  NOTE: Limit input rise times

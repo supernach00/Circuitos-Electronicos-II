@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal 128 160 -128 -160
-TEXT 0 0 Left 0 LT
-WINDOW 123 0 64 Center 0
-WINDOW 0 0 -64 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 123 0 64 Center 2
+WINDOW 0 0 -64 Center 2
 SYMATTR Value2 LT3060
 SYMATTR Prefix X
 SYMATTR SpiceModel LT3060.sub

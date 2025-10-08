@@ -1,0 +1,123 @@
+* Copyright (c) 1998-2023 Analog Devices, Inc.  All rights reserved.
+*
+.subckt ADA4097-1 1 2 3 4 5 6
+B1 MID N004 I=10u*dnlim(uplim(V(1,MID),V(4,MID)+69.3,.1), V(4,MID)-.15, .1)+1n*V(1,MID)-10.72254n
+C10 N004 MID 50f Rpar=100K noiseless
+M1 N019 NG Vee Vee NI temp=27
+C2 Vcc 5 1p Rpar=1g noiseless
+D5 NG Vee DLIMN1
+M2 P001 N005 N002 N002 PI temp=27
+A3 N013 N015 Vee Vee Vee Vee N005 Vee OTA g=2u ref=-.305 linear vlow=-1e308 vhigh=1e308
+C11 5 Vee 1p Rpar=1g noiseless
+D6 NG Vee DLIMN2
+C16 N015 5 52p
+A5 N010 MID N013 N013 N013 N013 N015 N013 OTA g=40u isource=5.05u Vlow=-1e308 Vhigh=1e308
+G1 Vee NG N015 N013 140n
+D9 N015 N013 DLIM
+C7 2 MID 3p Rser=1k Rpar=100G noiseless
+C13 Vcc Vee 10p
+C1 N007 MID 280f
+G2 MID N013 Vee MID .5m
+G4 MID N013 Vcc MID .5m
+C18 N013 MID 200p Rpar=1K noiseless
+C6 1 MID 3p Rser=1k Rpar=100G noiseless
+D3 Vcc N002 DSBD
+C5 Vcc N002 100f Rpar=10Meg noiseless
+D4 N002 N005 DLIMP
+D2 N007 MID DLIM0
+D1 Vee 5 DESD
+D8 Vee 1 DESD
+D10 Vee 2 DESD
+A2 N014 MID MID MID MID MID MID MID OTA g=0 in=0.5p ink=15
+D11 5 N019 DNR
+C15 N019 Vee 100f Rpar=10Meg noiseless
+D7 N005 Vcc DLIMPR
+A6 Vee Vcc M M M M N003 M OTA g=2u iout=1u ref=-2.5 Rout=1Meg Cout=100f vlow=-1e308 vhigh=1e308
+S4 N021 Vee N003 MID SBiasN
+D13 Vcc N012 DBiasDrop
+C14 N021 Vee 100f
+S2 N002 N005 MID N003 SHUT
+S3 NG Vee MID N003 SHUT
+D16 2 1 D10Meg
+C17 N008 MID 2250f noiseless Rser=2.7Meg Rpar=1Meg
+G3 MID N008 N007 MID 1µ
+D17 MID N007 DNLIN
+G5 MID N009 N008 MID 1µ
+S5 N013 N015 Vee 5 SGK
+C3 Vcc N005 .9p Rser=700k noiseless
+C12 NG Vee .9p Rser=700k noiseless
+D14 2 N012 DBiasOTT
+D15 1 N021 DBiasOTT
+S1 MID N006 Vcc 2 SNOI
+A7 N006 MID MID MID MID MID MID MID OTA g=0 in=17.25p ink=5
+A1 2 1 MID MID MID MID MID MID OTA g=0 in=0f ink=15
+GNOI_I 1 2 N014 MID 1µ
+S6 MID N014 Vcc 2 SNOI
+A4 MID N004 MID MID MID MID N007 MID OTA g=1u linear en=53n*(1+freq/160e3) enk=0.98 Vhigh=1e308 Vlow=-1e308
+GNOI_V N004 MID N006 MID 10n
+S9 Vcc Vee N016 MID SP
+S10 Vcc N005 N016 MID SHUT2
+S11 NG Vee N016 MID SHUT2
+S7 5 MID N016 MID SHUT2
+S8 P001 5 MID N016 SHUT3
+S13 N018 Vee MID N016 SHUT3
+G6 MID M 3 MID 500µ
+R1 M MID 1k noiseless
+G7 MID M 4 MID 500µ
+R2 N026 MID 58 noiseless
+C4 N027 N026 10n Rpar=47.9K noiseless
+R3 N027 MID 1 noiseless
+G8 MID N027 1 MID 5.25m
+G9 MID N027 2 MID 5.25m
+G10 MID N027 MID 3 5.25m
+G11 MID N027 MID 4 5.25m
+G12 MID N004 MID N026 1µ
+D12 Vcc N018 DP
+S12 N012 N021 MID N016 SHUT3
+C20 N010 MID 330f Rpar=1Meg noiseless
+G13 MID N010 N009 MID 1µ
+C19 N009 MID 125.26f noiseless Rser=2.667Meg Rpar=1Meg
+D18 Vee 6 DSHUT1
+C8 6 MID 100f
+A8 6 Vee MID MID MID MID N016 MID SCHMITT Vt=1.5 Vh=1m Trise=1u Tfall=20u
+I1 MID 2 125p
+G14 0 N024 Vcc 0 1k
+G15 0 N028 Vee 0 1k
+R5 N024 0 1m Noiseless
+R6 N028 0 1m Noiseless
+C21 N024 0 1n
+C22 N028 0 1n
+R10 N025 N024 1Meg Noiseless
+R11 N025 N028 1Meg Noiseless
+C23 N025 0 1
+E1 MID 0 N025 0 1
+R12 MID 0 1Meg Noiseless
+C24 MID 0 10n
+R13 Vee 4 1µ
+R14 Vcc 3 1µ
+B3 N004 MID I=10u*dnlim(uplim(V(2,MID),V(4,MID)+69.3,.1), V(4,MID)-.16, .1)+1n*V(2,MID)
+.model DP D(Ron=1k Roff=1G Vfwd=2.5 epsilon=100m ilimit=6.5u noiseless)
+.model SP SW(Ron=100 Roff=1G vt=.5 vh=10m ilimit=15u noiseless)
+.model DESD D(Ron=1k Roff=1G vfwd=700m epsilon=100m noiseless)
+.model SNOI SW(Ron=1 Roff=1Meg vt=1.2 vh=-100m noiseless)
+.model NI VDMOS(Vto=361.95m Kp=69.6m Mtriode=.9 lambda=.01)
+.model PI VDMOS(Vto=-361.95m Kp=174m lambda=.01 pchan is=0)
+.model DLIM0 D(Ron=10 Roff=10Meg Vfwd=1 epsilon=100m Vrev=1 epsilon=100m noiseless)
+.model DNLIN D(Roff=1.8Meg Ron=800k vfwd=0 epsilon=10m noiseless)
+.model DLIM D(Ron=100 Roff=4.755Meg Vfwd=700m Vrev=100m epsilon=10m revepsilon=10 noiseless)
+.model SHUT SW(level=2 Ron=10k Roff=100G vt=-.5 vh=-.2 noiseless)
+.model DSHUT1 D(Ron=1000 Roff=0.823E6 Vfwd=1 epsilon=100m Vrev=1 epsilon=100m ilimit=100n revilimit=0.1n noiseless)
+.model DSBD D( Ron=15 Roff=100Meg  Vfwd=-70m epsilon=50m  Vrev=100 revepsilon=10m noiseless)
+.model DNR D(Ron=1 Roff=100Meg Vfwd=-16m epsilon=300m noiseless)
+.model DLIMN1 D(Ron=200k Roff=415Meg Vfwd=1.378 Vrev=-330m epsilon=.1 noiseless)
+.model DLIMN2 D(Ron=5Meg Roff=1G Vfwd=-20m epsilon=50m ilimit=44n noiseless)
+.model DLIMP D(Ron=100k Roff=100Meg Vfwd=0.805 epsilon=10m noiseless)
+.model DLIMPR D(Ron=5Meg Roff=1G Vfwd=100m epsilon=10m noiseless)
+.model SGK SW(level=2 Ron=65k Roff=100G  vt=-260m vh=150m oneway epsilon=10m noiseless)
+.model SBiasN SW(level=2 Ron=5k Roff=1g vt=.5 vh=-.2 ilimit=0.2u noiseless)
+.model DBiasDrop D(Ron=1k Roff=1G vfwd=0.31 epsilon=200m noiseless)
+.model DBiasOTT D(Ron=500 Roff=1G vfwd=700m epsilon=200m noiseless)
+.model D10Meg D(Ron=10Meg Roff=10Meg vfwd=0 vrev=0 ilimit=10n revilimit=10n noiseless)
+.model SHUT3 SW(Ron=10 Roff=10G vt=-0.5 vh=100m noiseless)
+.model SHUT2 SW(Ron=10 Roff=10G vt=0.5 vh=100m noiseless)
+.ends ADA4097-1

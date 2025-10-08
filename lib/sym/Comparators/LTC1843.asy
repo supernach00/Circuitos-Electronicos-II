@@ -55,9 +55,9 @@ CIRCLE Normal -64 35 -70 29
 CIRCLE Normal -66 65 -68 63
 CIRCLE Normal -65 66 -69 62
 CIRCLE Normal -64 67 -70 61
-TEXT 4 64 Center 0 Ref
-WINDOW 0 8 -138 Left 0
-WINDOW 3 0 99 Center 0
+TEXT 4 64 Center 2 Ref
+WINDOW 0 8 -138 Left 2
+WINDOW 3 0 99 Center 2
 SYMATTR Value LTC1843
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC1.lib

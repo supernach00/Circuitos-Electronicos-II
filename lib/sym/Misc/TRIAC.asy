@@ -12,8 +12,8 @@ LINE Normal 44 20 60 44
 LINE Normal 36 20 64 20
 LINE Normal 0 64 -16 64
 LINE Normal 0 64 20 44
-WINDOW 0 48 0 Left 0
-WINDOW 3 48 72 Left 0
+WINDOW 0 48 0 Left 2
+WINDOW 3 48 72 Left 2
 SYMATTR Value TRIAC
 SYMATTR Prefix X
 SYMATTR Description Generic TRIAC symbol for use with a model that you supply.

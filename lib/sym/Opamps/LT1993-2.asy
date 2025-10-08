@@ -239,22 +239,22 @@ LINE Normal 54 -78 48 -78
 LINE Normal 54 -80 48 -80
 LINE Normal 54 -81 48 -81
 RECTANGLE Normal 176 176 -192 -176
-TEXT -21 -81 Center 0 A
-TEXT -21 80 Center 0 B
-TEXT 26 1 Center 0 C
-TEXT -189 -110 Left 0 -A
-TEXT -189 -78 Left 0 -B
-TEXT -189 77 Left 0 +A
-TEXT -189 110 Left 0 +B
-TEXT 170 -91 Right 0 +
-TEXT 168 87 Right 0 -
-TEXT 171 -13 Right 0 CM
-TEXT 127 -150 Left 0 LT
-WINDOW 3 77 187 Left 0
-WINDOW 0 127 -175 Bottom 0
+TEXT -21 -81 Center 2 A
+TEXT -21 80 Center 2 B
+TEXT 26 1 Center 2 C
+TEXT -189 -110 Left 2 -A
+TEXT -189 -78 Left 2 -B
+TEXT -189 77 Left 2 +A
+TEXT -189 110 Left 2 +B
+TEXT 170 -91 Right 2 +
+TEXT 168 87 Right 2 -
+TEXT 171 -13 Right 2 CM
+TEXT 127 -150 Center 2 LT
+WINDOW 3 77 187 Left 2
+WINDOW 0 127 -175 Bottom 2
 SYMATTR Value LT1993-2
 SYMATTR Prefix X
-SYMATTR SpiceModel LTC3.LIB
+SYMATTR SpiceModel LTC3.lib
 SYMATTR Value2 LT1993-2
 SYMATTR Description 800MHz Low Distortion, Low Noise Differential Amplifier and ADC Driver
 PIN 64 -176 TOP 8

@@ -1,12 +1,12 @@
 Version 4
 SymbolType BLOCK
 RECTANGLE Normal 112 80 -112 -48
-TEXT 0 0 Left 0 LT
-WINDOW 0 0 -48 Bottom 0
-WINDOW 3 16 96 Left 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 0 -48 Bottom 2
+WINDOW 3 16 96 Left 2
 SYMATTR Value LT1021-7
 SYMATTR Prefix X
-SYMATTR SpiceModel LTC3.lib
+SYMATTR SpiceModel LT1021-7.sub
 SYMATTR Value2 LT1021-7
 SYMATTR Description Precision 7V Reference
 PIN -112 0 LEFT 8

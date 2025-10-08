@@ -13,8 +13,8 @@ LINE Normal 0 80 8 80
 LINE Normal 8 16 8 80
 LINE Normal 48 16 16 16
 LINE Normal 48 0 48 16
-WINDOW 0 56 32 Left 0
-WINDOW 3 56 72 Left 0
+WINDOW 0 56 32 Left 2
+WINDOW 3 56 72 Left 2
 SYMATTR Value NMOS
 SYMATTR Prefix MN
 SYMATTR Description N-Channel MOSFET transistor

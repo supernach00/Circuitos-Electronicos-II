@@ -11,12 +11,12 @@ LINE Normal -48 32 16 64
 LINE Normal 80 64 16 64
 LINE Normal -47 64 -112 64
 RECTANGLE Normal 80 160 -112 -128
-TEXT 28 0 Left 0 LT
-WINDOW 0 -16 -105 Center 0
-WINDOW 3 -16 111 Center 0
+TEXT 28 0 Center 2 LT
+WINDOW 0 -16 -105 Center 2
+WINDOW 3 -16 111 Center 2
 SYMATTR Value LTC6911-1
 SYMATTR Prefix X
-SYMATTR SpiceModel LTC1.LIB
+SYMATTR SpiceModel LTC1.lib
 SYMATTR Value2 LTC6911-1
 SYMATTR Description Dual Matched Amplifiers with Digitally Programmable Gain in MSOP
 PIN -112 -64 NONE 4

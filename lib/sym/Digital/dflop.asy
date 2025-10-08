@@ -7,8 +7,8 @@ LINE Normal 80 144 80 0
 LINE Normal -80 88 -72 96
 LINE Normal -80 104 -72 96
 CIRCLE Normal 96 104 80 88
-WINDOW 0 8 -16 Left 0
-WINDOW 3 8 168 Left 0
+WINDOW 0 8 -16 Left 2
+WINDOW 3 8 168 Left 2
 SYMATTR Prefix A
 SYMATTR SpiceModel DFLOP
 SYMATTR Description Behavioral D-flipflop

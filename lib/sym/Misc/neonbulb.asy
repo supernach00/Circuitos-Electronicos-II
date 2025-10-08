@@ -13,7 +13,7 @@ CIRCLE Normal 17 9 15 7
 CIRCLE Normal 18 10 14 6
 CIRCLE Normal 19 11 13 5
 CIRCLE Normal 20 12 12 4
-WINDOW 0 16 -48 Left 0
+WINDOW 0 16 -48 Left 2
 SYMATTR Prefix X
 SYMATTR Description Parameterized Neon Bulb
 SYMATTR Value2 Vstrike=100 Vhold=50

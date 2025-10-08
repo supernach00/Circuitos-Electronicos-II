@@ -1,12 +1,12 @@
 Version 4
 SymbolType BLOCK
 RECTANGLE Normal 192 448 -192 -448
-TEXT 0 0 Left 0 LT
-WINDOW 3 0 144 Center 0
-WINDOW 0 0 -144 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 3 0 144 Center 2
+WINDOW 0 0 -144 Center 2
+SYMATTR Value LT3640
 SYMATTR Prefix X
 SYMATTR SpiceModel LT3640.sub
-SYMATTR Value LT3640
 SYMATTR Value2 LT3640
 SYMATTR Description Dual Monalithic Buck Regulator with Power-On Reset and Watchdog Timer
 PIN -96 448 BOTTOM 8

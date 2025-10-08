@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal -176 -496 176 496
-TEXT 0 0 Center 0 LT
-WINDOW 0 0 -96 Center 0
-WINDOW 3 0 96 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 0 -96 Center 2
+WINDOW 3 0 96 Center 2
 SYMATTR Value LTC3785-1
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC3785-1.sub
@@ -33,6 +33,9 @@ PINATTR SpiceOrder 7
 PIN -176 432 LEFT 8
 PINATTR PinName Mode
 PINATTR SpiceOrder 8
+PIN -176 -432 LEFT 8
+PINATTR PinName Pgood
+PINATTR SpiceOrder 9
 PIN 176 -336 RIGHT 8
 PINATTR PinName Isvout
 PINATTR SpiceOrder 10
@@ -81,6 +84,3 @@ PINATTR SpiceOrder 24
 PIN 0 496 BOTTOM 8
 PINATTR PinName GND
 PINATTR SpiceOrder 25
-PIN -176 -432 LEFT 8
-PINATTR PinName Pgood
-PINATTR SpiceOrder 9

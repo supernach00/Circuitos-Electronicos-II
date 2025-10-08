@@ -6,8 +6,8 @@ LINE Normal -8 -100 8 -100
 RECTANGLE Normal -112 -128 112 128
 ARC Normal -20 -124 4 -100 -20 -112 -8 -100
 ARC Normal -4 -124 20 -100 8 -100 20 -112
-WINDOW 0 0 -64 Center 0
-WINDOW 3 0 64 Center 0
+WINDOW 0 0 -64 Center 2
+WINDOW 3 0 64 Center 2
 SYMATTR Value NE555
 SYMATTR Prefix X
 SYMATTR SpiceModel NE555.sub

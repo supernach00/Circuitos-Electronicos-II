@@ -2,9 +2,9 @@ Version 4
 SymbolType CELL
 RECTANGLE Normal 96 112 -96 -96
 ARC Normal -9 -106 8 -89 -3 -97 27 -93
-TEXT 0 -40 Left 0 LT
-WINDOW 3 0 40 Center 0
-WINDOW 0 0 -96 Bottom 0
+TEXT 0 -40 Center 2 LT
+WINDOW 3 0 40 Center 2
+WINDOW 0 0 -96 Bottom 2
 SYMATTR Value LTC2903-A1
 SYMATTR Prefix X
 SYMATTR Description Precision Quad Supply Monitor in 6-Lead SOT-23

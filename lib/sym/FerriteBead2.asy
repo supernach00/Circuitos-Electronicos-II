@@ -41,7 +41,7 @@ LINE Normal -7 9 -7 -9
 LINE Normal -6 9 -6 -9
 LINE Normal -8 9 -8 -9
 RECTANGLE Normal -9 -9 9 9
-WINDOW 0 21 0 Left 0
+WINDOW 0 21 0 Left 2
 SYMATTR Prefix L_Ferrite_Bead
 SYMATTR Description A Ferrite Bead(Alternate symbol)
 PIN 0 -32 NONE 8

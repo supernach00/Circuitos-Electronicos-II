@@ -1,7 +1,7 @@
 Version 4
 SymbolType BLOCK
 RECTANGLE Normal 144 208 -144 -208
-TEXT 0 0 Left 2 LT
+TEXT 0 0 Center 2 LT
 WINDOW 3 0 64 Center 2
 WINDOW 0 0 -64 Center 2
 SYMATTR Value LTC4232-1
@@ -9,9 +9,6 @@ SYMATTR Prefix X
 SYMATTR SpiceModel LTC4232-1.sub
 SYMATTR Value2 LTC4232-1
 SYMATTR Description 5A Integrated Hot Swap Controller
-PIN -144 96 LEFT 8
-PINATTR PinName Sense
-PINATTR SpiceOrder 16
 PIN -144 -160 LEFT 8
 PINATTR PinName Vdd
 PINATTR SpiceOrder 1
@@ -51,3 +48,6 @@ PINATTR SpiceOrder 14
 PIN -144 160 LEFT 8
 PINATTR PinName Iset
 PINATTR SpiceOrder 15
+PIN -144 96 LEFT 8
+PINATTR PinName Sense
+PINATTR SpiceOrder 16

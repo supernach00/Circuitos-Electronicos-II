@@ -6,8 +6,8 @@ LINE Normal -80 -64 144 -64
 LINE Normal -80 -64 -80 128
 LINE Normal -80 128 144 128
 LINE Normal 144 128 144 -64
-WINDOW 0 -64 -80 Left 0
-WINDOW 3 -64 152 Left 0
+WINDOW 0 -64 -80 Left 2
+WINDOW 3 -64 152 Left 2
 SYMATTR Prefix A
 SYMATTR SpiceModel COUNTER
 SYMATTR Description Behavioral counter

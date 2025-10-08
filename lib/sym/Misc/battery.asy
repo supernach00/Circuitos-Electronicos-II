@@ -8,8 +8,8 @@ LINE Normal -20 24 -12 24
 LINE Normal -16 20 -16 28
 RECTANGLE Normal -16 44 16 52
 RECTANGLE Normal -16 68 16 76
-WINDOW 0 24 16 Left 0
-WINDOW 3 24 104 Left 0
+WINDOW 0 24 16 Left 2
+WINDOW 3 24 104 Left 2
 SYMATTR Value V
 SYMATTR Prefix V
 SYMATTR Description Voltage Source, either DC, AC, PULSE, SINE, PWL, EXP, or SFFM

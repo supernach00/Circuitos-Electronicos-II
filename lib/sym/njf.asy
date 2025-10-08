@@ -9,8 +9,8 @@ LINE Normal 0 64 4 64
 LINE Normal 4 68 16 64
 LINE Normal 4 60 16 64
 LINE Normal 4 60 4 68
-WINDOW 0 56 32 Left 0
-WINDOW 3 56 72 Left 0
+WINDOW 0 56 32 Left 2
+WINDOW 3 56 72 Left 2
 SYMATTR Value NJF
 SYMATTR Prefix JN
 SYMATTR Description N-Channel JFET

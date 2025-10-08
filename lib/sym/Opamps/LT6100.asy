@@ -98,15 +98,15 @@ CIRCLE Normal 35 -61 29 -67
 CIRCLE Normal 92 -31 90 -33
 CIRCLE Normal 93 -30 89 -34
 CIRCLE Normal 94 -29 88 -35
-TEXT -119 -75 Center 0 +
-TEXT -119 -11 Center 0 -
-TEXT -80 -112 Center 0 V+
-TEXT -48 16 Left 0 V-
-TEXT -34 -112 Left 0 A4
-TEXT 38 -112 Left 0 A2
-TEXT 78 11 Left 0 LT
-WINDOW 3 48 48 Left 0
-WINDOW 0 48 -144 Left 0
+TEXT -119 -75 Center 2 +
+TEXT -119 -11 Center 2 -
+TEXT -80 -112 Center 2 V+
+TEXT -48 16 Left 2 V-
+TEXT -34 -112 Left 2 A4
+TEXT 38 -112 Left 2 A2
+TEXT 78 11 Center 2 LT
+WINDOW 3 48 48 Left 2
+WINDOW 0 48 -144 Left 2
 SYMATTR Value LT6100
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC3.lib

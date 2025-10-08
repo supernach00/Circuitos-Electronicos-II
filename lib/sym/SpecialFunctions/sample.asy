@@ -7,8 +7,8 @@ LINE Normal 80 96 96 16
 LINE Normal 96 16 80 -64
 LINE Normal -80 40 -72 32
 LINE Normal -80 24 -72 32
-WINDOW 0 -64 -80 Left 0
-WINDOW 3 -64 120 Left 0
+WINDOW 0 -64 -80 Left 2
+WINDOW 3 -64 120 Left 2
 SYMATTR Prefix A
 SYMATTR SpiceModel SAMPLEHOLD
 SYMATTR Description Behavioral Sample and Hold function block

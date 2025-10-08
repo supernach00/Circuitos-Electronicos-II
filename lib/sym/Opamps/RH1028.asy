@@ -11,13 +11,13 @@ LINE Normal 0 96 0 80
 LINE Normal 4 44 12 44
 LINE Normal 8 40 8 48
 LINE Normal 4 84 12 84
-WINDOW 0 19 43 Left 0
-WINDOW 3 19 93 Left 0
+WINDOW 0 19 43 Left 2
+WINDOW 3 19 93 Left 2
+SYMATTR Value RH1028
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC.lib
 SYMATTR Value2 LT1028
 SYMATTR Description Ultra-Low Noise Precision High Speed Operational Amplifier
-SYMATTR Value RH1028
 PIN -32 80 NONE 0
 PINATTR PinName In+
 PINATTR SpiceOrder 1

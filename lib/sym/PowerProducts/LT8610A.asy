@@ -9,9 +9,6 @@ SYMATTR Prefix X
 SYMATTR SpiceModel LT8610A.sub
 SYMATTR Value2 LT8610A
 SYMATTR Description 42V, 3.5A Synchronous Step-Down Regulator with 2.5µA Quiescent Current\n\nNote: Sync function is not modeled.
-PIN -144 -96 LEFT 8
-PINATTR PinName Mode
-PINATTR SpiceOrder 1
 PIN -144 96 LEFT 8
 PINATTR PinName TR/SS
 PINATTR SpiceOrder 2

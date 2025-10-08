@@ -2,7 +2,7 @@ Version 4
 SymbolType CELL
 RECTANGLE Normal 112 160 -112 -160
 TEXT 0 58 Center 2 LTC2960-3
-TEXT 0 0 Left 2 LT
+TEXT 0 0 Center 2 LT
 WINDOW 0 0 -55 Center 2
 SYMATTR Value LTC2960-3
 SYMATTR Prefix X

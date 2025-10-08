@@ -11,8 +11,8 @@ LINE Normal 0 60 32 52
 LINE Normal 0 60 16 64
 LINE Normal -16 32 -8 32
 LINE Normal -8 4 -8 60
-WINDOW 0 36 16 Left 0
-WINDOW 3 36 56 Left 0
+WINDOW 0 36 16 Left 2
+WINDOW 3 36 56 Left 2
 SYMATTR Value URC
 SYMATTR Prefix U
 SYMATTR Description Uniform RC-line.  Intended for interconnection on IC's but rarely used.

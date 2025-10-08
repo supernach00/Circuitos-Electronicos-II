@@ -5,8 +5,8 @@ LINE Normal -48 16 -48 128
 LINE Normal -48 128 48 128
 LINE Normal 48 128 48 16
 CIRCLE Normal 64 104 48 88
-WINDOW 0 -40 0 Left 0
-WINDOW 3 -40 152 Left 0
+WINDOW 0 -40 0 Left 2
+WINDOW 3 -40 152 Left 2
 SYMATTR Prefix A
 SYMATTR SpiceModel SRFLOP
 SYMATTR Description Behavioral Set-Reset Flipflop

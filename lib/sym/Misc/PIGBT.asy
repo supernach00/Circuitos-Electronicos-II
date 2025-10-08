@@ -14,8 +14,8 @@ LINE Normal 16 16 32 8
 LINE Normal 28 4 48 0
 LINE Normal 32 12 48 0
 LINE Normal 32 12 28 4
-WINDOW 0 56 32 Left 0
-WINDOW 3 56 72 Left 0
+WINDOW 0 56 32 Left 2
+WINDOW 3 56 72 Left 2
 SYMATTR Value PIGBT
 SYMATTR Prefix Z
 SYMATTR Description P-Channel IGBT symbol for a model you supply.

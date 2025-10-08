@@ -49,7 +49,7 @@ LINE Normal -37 84 -42 79
 LINE Normal -87 84 -92 79
 LINE Normal -135 84 -140 79
 RECTANGLE Normal 176 128 -176 -160
-TEXT 0 0 Left 2 LT
+TEXT 0 0 Center 2 LT
 TEXT 1 110 Center 2 V-
 TEXT -44 -144 Left 2 V+
 TEXT -144 -4 Bottom 2 IOUT

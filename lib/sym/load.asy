@@ -9,8 +9,8 @@ LINE Normal 24 56 24 8
 LINE Normal 24 8 8 8
 LINE Normal 16 0 16 8
 LINE Normal 16 56 16 64
-WINDOW 0 48 8 Left 0
-WINDOW 3 48 56 Left 0
+WINDOW 0 48 8 Left 2
+WINDOW 3 48 56 Left 2
 SYMATTR Value I
 SYMATTR Prefix I
 SYMATTR Description Current Source, either DC, AC, PULSE, SINE, PWL, EXP, or SFFM

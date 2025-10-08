@@ -6,8 +6,8 @@ LINE Normal 27 24 5 24
 LINE Normal 5 88 5 24
 LINE Normal 5 88 27 88
 LINE Normal 27 24 27 88
-WINDOW 0 31 40 Left 0
-WINDOW 3 31 76 Left 0
+WINDOW 0 31 40 Left 2
+WINDOW 3 31 76 Left 2
 SYMATTR Value R
 SYMATTR Prefix R
 SYMATTR Description A Resistor(European style graphic)

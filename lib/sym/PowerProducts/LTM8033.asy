@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal -128 -176 128 160
-TEXT 0 -7 Center 0 LT
-WINDOW 0 0 -88 Center 0
-WINDOW 3 0 72 Center 0
+TEXT 0 -7 Center 2 LT
+WINDOW 0 0 -88 Center 2
+WINDOW 3 0 72 Center 2
 SYMATTR Value LTM8033
 SYMATTR Prefix X
 SYMATTR SpiceModel LTM8033.sub
@@ -24,6 +24,9 @@ PINATTR SpiceOrder 4
 PIN -128 -128 LEFT 8
 PINATTR PinName Run/SS
 PINATTR SpiceOrder 5
+PIN -48 -176 TOP 8
+PINATTR PinName FIN
+PINATTR SpiceOrder 6
 PIN -128 -48 LEFT 8
 PINATTR PinName Pgood
 PINATTR SpiceOrder 7
@@ -39,6 +42,3 @@ PINATTR SpiceOrder 10
 PIN 0 160 BOTTOM 8
 PINATTR PinName GND
 PINATTR SpiceOrder 11
-PIN -48 -176 TOP 8
-PINATTR PinName FIN
-PINATTR SpiceOrder 6

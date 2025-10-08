@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal 143 96 -144 -368
-TEXT 0 -215 Center 0 LT
-WINDOW 0 -1 -296 Center 0
-WINDOW 3 1 -48 Center 0
+TEXT 0 -215 Center 2 LT
+WINDOW 0 -1 -296 Center 2
+WINDOW 3 1 -48 Center 2
 SYMATTR Value LTC1563-2
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC1.lib

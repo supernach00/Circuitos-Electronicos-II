@@ -4,8 +4,8 @@ LINE Normal 0 48 40 64
 LINE Normal 0 80 40 64
 LINE Normal 0 80 0 48
 LINE Normal 40 64 64 64
-WINDOW 0 8 32 Left 0
-WINDOW 3 8 104 Left 0
+WINDOW 0 8 32 Left 2
+WINDOW 3 8 104 Left 2
 SYMATTR Prefix A
 SYMATTR SpiceModel BUF
 SYMATTR Description Behavioral buffer

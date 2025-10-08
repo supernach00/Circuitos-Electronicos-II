@@ -1,13 +1,13 @@
 Version 4
 SymbolType BLOCK
 RECTANGLE Normal 336 144 -320 -128
-TEXT 0 -16 Center 0 LT
-WINDOW 0 0 -64 Center 0
-WINDOW 39 14 87 Center 0
-WINDOW 38 0 32 Center 0
+TEXT 0 -16 Center 2 LT
+WINDOW 0 0 -64 Center 2
+WINDOW 39 14 87 Center 2
+WINDOW 38 0 32 Center 2
 SYMATTR SpiceLine uvautoretry=1 ovautoretry=1 ocautoretry=0
-SYMATTR Prefix X
 SYMATTR SpiceModel LTC4260
+SYMATTR Prefix X
 SYMATTR Description Hot Swap Controller with I2C Compatible Monitoring
 SYMATTR ModelFile LTC4260.sub
 PIN -112 -128 TOP 8

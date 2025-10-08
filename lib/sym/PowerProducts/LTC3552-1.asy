@@ -1,16 +1,16 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal 144 368 -144 -368
-TEXT 0 0 Center 0 LT
-WINDOW 3 0 96 Center 0
-WINDOW 0 0 -96 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 3 0 96 Center 2
+WINDOW 0 0 -96 Center 2
 SYMATTR Value LTC3552-1
 SYMATTR Prefix X
 SYMATTR Value2 LTC3552-1
 SYMATTR Description Standalong Li-Ion Battery Charger and Dual Synchronous Buck Converter
 SYMATTR SpiceModel LTC3552-1.sub
 PIN -144 -240 LEFT 8
-PINATTR PinName ITERM
+PINATTR PinName Iterm
 PINATTR SpiceOrder 1
 PIN 144 -336 RIGHT 8
 PINATTR PinName BAT
@@ -49,7 +49,7 @@ PIN -144 -144 LEFT 8
 PINATTR PinName PROG
 PINATTR SpiceOrder 13
 PIN -144 -336 LEFT 8
-PINATTR PinName VIN
+PINATTR PinName Vin
 PINATTR SpiceOrder 14
 PIN 144 48 RIGHT 8
 PINATTR PinName _PWR

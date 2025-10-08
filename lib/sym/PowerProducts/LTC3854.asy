@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal 112 272 -112 -272
-TEXT 0 0 Left 0 LT
-WINDOW 123 0 96 Center 0
-WINDOW 0 0 -96 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 123 0 96 Center 2
+WINDOW 0 0 -96 Center 2
 SYMATTR Value2 LTC3854
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC3854.sub
@@ -12,6 +12,9 @@ SYMATTR Description Samall Footprint, Wide Vin Range Synchronous Step-Down Contr
 PIN -112 48 LEFT 8
 PINATTR PinName FB
 PINATTR SpiceOrder 1
+PIN -112 -48 LEFT 8
+PINATTR PinName Ith
+PINATTR SpiceOrder 2
 PIN -112 -144 LEFT 8
 PINATTR PinName Run/SS
 PINATTR SpiceOrder 3
@@ -36,9 +39,6 @@ PINATTR SpiceOrder 9
 PIN -112 -240 LEFT 8
 PINATTR PinName Vin
 PINATTR SpiceOrder 10
-PIN -112 -48 LEFT 8
-PINATTR PinName Ith
-PINATTR SpiceOrder 2
 PIN -112 144 LEFT 8
 PINATTR PinName Sense-
 PINATTR SpiceOrder 11

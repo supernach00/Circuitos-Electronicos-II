@@ -6,8 +6,8 @@ LINE Normal 48 16 48 0
 LINE Normal 16 16 48 16
 LINE Normal 0 80 16 80
 LINE Normal 16 80 48 80
-WINDOW 0 56 32 Left 0
-WINDOW 3 56 72 Left 0
+WINDOW 0 56 32 Left 2
+WINDOW 3 56 72 Left 2
 SYMATTR Value NMF
 SYMATTR Prefix Z
 SYMATTR Description GaAs MESFET transistor  Note: You must supply the .model for this device

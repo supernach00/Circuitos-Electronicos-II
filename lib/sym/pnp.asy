@@ -7,8 +7,8 @@ LINE Normal 40 80 64 96
 LINE Normal 16 80 16 16
 LINE Normal 16 32 64 0
 LINE Normal 16 48 0 48
-WINDOW 0 84 32 Left 0
-WINDOW 3 84 68 Left 0
+WINDOW 0 84 32 Left 2
+WINDOW 3 84 68 Left 2
 SYMATTR Value PNP
 SYMATTR Prefix QP
 SYMATTR Description Bipolar PNP transistor

@@ -22,8 +22,8 @@ LINE Normal 20 -4 24 0
 RECTANGLE Normal -96 -64 96 64
 ARC Normal -4 12 20 -12 16 -4 -4 0
 ARC Normal -28 12 -4 -12 -28 4 -4 0
-WINDOW 0 0 -80 Center 0
-WINDOW 3 0 80 Center 0
+WINDOW 0 0 -80 Center 2
+WINDOW 3 0 80 Center 2
 SYMATTR Value PC817D
 SYMATTR Prefix X
 SYMATTR SpiceModel PC817.sub

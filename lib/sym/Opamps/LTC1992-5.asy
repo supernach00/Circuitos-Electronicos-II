@@ -36,11 +36,11 @@ LINE Normal -40 -10 -40 -15
 LINE Normal -37 -10 -37 -15
 CIRCLE Normal 58 40 42 24
 ARC Normal -34 -15 -39 -10 -37 -10 -37 -15
-WINDOW 3 16 64 Left 0
-WINDOW 0 16 -64 Left 0
+WINDOW 3 16 64 Left 2
+WINDOW 0 16 -64 Left 2
 SYMATTR Value LTC1992-5
 SYMATTR Prefix X
-SYMATTR SpiceModel LTC4.LIB
+SYMATTR SpiceModel LTC4.lib
 SYMATTR Value2 LTC1992-5
 SYMATTR Description Low Power, Fully Differential I/O Amplifier
 PIN -64 -48 NONE 8

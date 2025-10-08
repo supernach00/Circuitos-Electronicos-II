@@ -11,11 +11,11 @@ LINE Normal 0 96 0 80
 LINE Normal 4 44 12 44
 LINE Normal 8 40 8 48
 LINE Normal 4 84 12 84
-WINDOW 0 16 32 Left 0
-WINDOW 3 16 96 Left 0
+WINDOW 0 16 32 Left 2
+WINDOW 3 16 96 Left 2
 SYMATTR Value LT1721
 SYMATTR Prefix X
-SYMATTR SpiceModel LTC.lib
+SYMATTR SpiceModel LT1720.sub
 SYMATTR Value2 LT1720
 SYMATTR Description Quad 4.5ns, Single Supply 3V/5V Comparator with Rail-to-Rail Outputs
 PIN -32 80 NONE 0

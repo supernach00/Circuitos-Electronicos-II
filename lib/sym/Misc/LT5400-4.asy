@@ -28,14 +28,14 @@ LINE Normal -12 88 -4 104
 LINE Normal 4 88 -4 104
 LINE Normal 4 88 12 104
 LINE Normal -12 88 -16 96
-RECTANGLE Normal -96 -128 96 128
+RECTANGLE Normal -96 -144 96 144
 TEXT 64 -64 Center 2 LT
 TEXT 2 -102 Bottom 2 1K
 TEXT 1 -39 Bottom 2 1K
 TEXT 1 26 Bottom 2 1K
 TEXT 1 89 Bottom 2 1K
-WINDOW 0 0 -128 Bottom 2
-WINDOW 3 0 128 Top 2
+WINDOW 0 0 -144 Bottom 2
+WINDOW 3 16 160 Left 2
 SYMATTR Value LT5400-4
 SYMATTR Prefix X
 SYMATTR Description Quad Matched Resistor Network
@@ -65,3 +65,6 @@ PINATTR SpiceOrder 7
 PIN 96 -96 NONE 8
 PINATTR PinName 8
 PINATTR SpiceOrder 8
+PIN 0 144 BOTTOM 8
+PINATTR PinName PAD
+PINATTR SpiceOrder 9

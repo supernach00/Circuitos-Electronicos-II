@@ -11,13 +11,13 @@ LINE Normal 0 96 0 80
 LINE Normal 4 44 12 44
 LINE Normal 8 40 8 48
 LINE Normal 4 84 12 84
-WINDOW 0 16 32 Left 0
-WINDOW 3 16 96 Left 0
+WINDOW 0 16 32 Left 2
+WINDOW 3 16 96 Left 2
 SYMATTR Value ADTL082
 SYMATTR Prefix X
 SYMATTR SpiceModel ADI.lib
 SYMATTR Value2 ADTL082
-SYMATTR Description Industry Standard TL082
+SYMATTR Description Dual Low Cost JFET Input Operational Amplifier
 PIN -32 80 NONE 0
 PINATTR PinName In+
 PINATTR SpiceOrder 1

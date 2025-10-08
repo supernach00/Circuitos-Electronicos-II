@@ -8,8 +8,8 @@ LINE Normal 8 36 24 36
 LINE Normal 24 36 24 28
 LINE Normal 24 28 8 28
 LINE Normal 8 28 8 36
-WINDOW 0 24 0 Left 0
-WINDOW 3 24 72 Left 0
+WINDOW 0 24 0 Left 2
+WINDOW 3 24 72 Left 2
 SYMATTR Value C
 SYMATTR Prefix C
 SYMATTR Description Piezoelectric crystal.  Set C, Lser and Cpar to set series and parallel resonances.  This is actually the same as a capacitor.

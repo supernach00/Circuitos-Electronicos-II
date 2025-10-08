@@ -52,9 +52,9 @@ RECTANGLE Normal -64 -128 64 128
 CIRCLE Normal -50 1 -52 -1
 CIRCLE Normal -49 2 -53 -2
 CIRCLE Normal -48 3 -54 -3
-TEXT 1 0 Center 0 Ref
-WINDOW 0 8 -144 Left 0
-WINDOW 3 13 144 Left 0
+TEXT 1 0 Center 2 Ref
+WINDOW 0 8 -144 Left 2
+WINDOW 3 13 144 Left 2
 SYMATTR Value LT6700-3
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC1.lib

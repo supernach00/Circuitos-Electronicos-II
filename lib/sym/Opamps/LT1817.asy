@@ -11,11 +11,11 @@ LINE Normal 0 32 0 16
 LINE Normal 4 -20 12 -20
 LINE Normal 8 -24 8 -16
 LINE Normal 4 20 12 20
-WINDOW 0 16 -32 Left 0
-WINDOW 3 16 32 Left 0
+WINDOW 0 16 -32 Left 2
+WINDOW 3 16 32 Left 2
 SYMATTR Value LT1817
 SYMATTR Prefix X
-SYMATTR SpiceModel LTC2.LIB
+SYMATTR SpiceModel LTC2.lib
 SYMATTR Value2 LT1815
 SYMATTR Description Quad 220MHz, 1500V/µs Operational Amplifier
 PIN -32 16 NONE 0

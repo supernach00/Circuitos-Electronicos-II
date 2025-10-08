@@ -13,8 +13,8 @@ LINE Normal -8 40 -24 40
 LINE Normal -24 88 -24 40
 LINE Normal -20 80 -12 80
 LINE Normal -16 76 -16 84
-WINDOW 0 0 32 Left 0
-WINDOW 3 0 104 Left 0
+WINDOW 0 0 32 Left 2
+WINDOW 3 0 104 Left 2
 SYMATTR Prefix A
 SYMATTR SpiceModel VARISTOR
 SYMATTR Description Voltage controlled varistor

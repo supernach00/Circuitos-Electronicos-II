@@ -4,8 +4,8 @@ LINE Normal -80 -64 288 -64
 LINE Normal -80 -64 -80 128
 LINE Normal -80 128 288 128
 LINE Normal 288 128 288 -64
-WINDOW 0 -64 -80 Left 0
-WINDOW 3 -64 152 Left 0
+WINDOW 0 -64 -80 Left 2
+WINDOW 3 -64 152 Left 2
 SYMATTR Value capometer
 SYMATTR Prefix X
 SYMATTR SpiceLine current=1m freq=3Meg C=.5µ Q=.25

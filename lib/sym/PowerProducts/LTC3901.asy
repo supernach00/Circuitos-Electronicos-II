@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal -128 -192 128 192
-TEXT 0 0 Center 0 LT
-WINDOW 0 0 -64 Center 0
-WINDOW 3 0 64 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 0 -64 Center 2
+WINDOW 3 0 64 Center 2
 SYMATTR Value LTC3901
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC3901.sub
@@ -41,7 +41,7 @@ PINATTR PinName CSF-
 PINATTR SpiceOrder 12
 PIN 128 96 RIGHT 8
 PINATTR PinName MF
-PINATTR SpiceOrder 14
+PINATTR SpiceOrder 10
 PIN -128 -160 LEFT 8
 PINATTR PinName Vcc
-PINATTR SpiceOrder 16
+PINATTR SpiceOrder 3

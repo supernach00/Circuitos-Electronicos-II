@@ -1,14 +1,20 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal 176 304 -160 -176
-TEXT -3 -88 Center 0 LT
-WINDOW 3 -3 -24 Center 0
-WINDOW 0 -3 -152 Center 0
+TEXT -3 -88 Center 2 LT
+WINDOW 3 -3 -24 Center 2
+WINDOW 0 -3 -152 Center 2
 SYMATTR Value LTC2932
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC2932.sub
 SYMATTR Description Configurable Six Supply Monitor with Adjustable Reset Timer and Supply Tolerance
 SYMATTR Value2 LTC2932
+PIN 176 48 RIGHT 8
+PINATTR PinName COMP5
+PINATTR SpiceOrder 1
+PIN -160 48 LEFT 8
+PINATTR PinName V5
+PINATTR SpiceOrder 2
 PIN 176 -48 RIGHT 8
 PINATTR PinName COMP3
 PINATTR SpiceOrder 3
@@ -57,15 +63,9 @@ PINATTR SpiceOrder 17
 PIN 176 -96 RIGHT 8
 PINATTR PinName COMP2
 PINATTR SpiceOrder 18
-PIN -160 48 LEFT 8
-PINATTR PinName V5
-PINATTR SpiceOrder 2
 PIN -160 96 LEFT 8
 PINATTR PinName V6
 PINATTR SpiceOrder 19
-PIN 176 48 RIGHT 8
-PINATTR PinName COMP5
-PINATTR SpiceOrder 1
 PIN 176 96 RIGHT 8
 PINATTR PinName COMP6
 PINATTR SpiceOrder 20

@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal -224 -400 224 400
-TEXT 0 0 Center 0 LT
-WINDOW 0 0 -176 Center 0
-WINDOW 3 0 176 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 0 -176 Center 2
+WINDOW 3 0 176 Center 2
 SYMATTR Value LTM4619
 SYMATTR Prefix X
 SYMATTR SpiceModel LTM4619.sub
@@ -12,6 +12,12 @@ SYMATTR Description Dual, 26Vin, 4A DC/DC µModule Regulator
 PIN -224 240 LEFT 8
 PINATTR PinName Track/SS1
 PINATTR SpiceOrder 1
+PIN -224 -48 LEFT 8
+PINATTR PinName Vout1
+PINATTR SpiceOrder 2
+PIN 224 -48 RIGHT 8
+PINATTR PinName Vout2
+PINATTR SpiceOrder 3
 PIN -224 48 LEFT 8
 PINATTR PinName FB1
 PINATTR SpiceOrder 4
@@ -63,9 +69,3 @@ PINATTR SpiceOrder 28
 PIN 224 -336 RIGHT 8
 PINATTR PinName ExtVcc
 PINATTR SpiceOrder 29
-PIN -224 -48 LEFT 8
-PINATTR PinName Vout1
-PINATTR SpiceOrder 2
-PIN 224 -48 RIGHT 8
-PINATTR PinName Vout2
-PINATTR SpiceOrder 3

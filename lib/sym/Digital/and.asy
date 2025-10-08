@@ -6,8 +6,8 @@ LINE Normal -32 96 -32 32
 LINE Normal 16 48 32 48
 CIRCLE Normal 32 88 16 72
 ARC Normal -44 96 20 32 -12 96 -12 32
-WINDOW 0 16 24 Left 0
-WINDOW 3 16 112 Left 0
+WINDOW 0 16 24 Left 2
+WINDOW 3 16 112 Left 2
 SYMATTR Prefix A
 SYMATTR SpiceModel AND
 SYMATTR Description Behavioral AND gate

@@ -6,9 +6,9 @@ LINE Normal -8 -100 8 -100
 RECTANGLE Normal -128 -128 128 128
 ARC Normal -20 -124 4 -100 -20 -112 -8 -100
 ARC Normal -4 -124 20 -100 8 -100 20 -112
-TEXT 0 0 Center 0 LT
-WINDOW 0 0 -144 Center 0
-WINDOW 3 0 144 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 0 -144 Center 2
+WINDOW 3 0 144 Center 2
 SYMATTR Value LT1101A
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC.lib

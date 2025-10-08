@@ -8,7 +8,7 @@ SYMATTR Value LT6657-2.5
 SYMATTR Prefix X
 SYMATTR SpiceModel LT6657.lib
 SYMATTR Value2 LT6657-2.5
-SYMATTR Description 1.5ppm/deg C Drift, Low Noise, Buffered Reference
+SYMATTR Description 1.5ppm/°C Drift, Low Noise, Buffered Reference
 PIN -144 -32 LEFT 8
 PINATTR PinName IN
 PINATTR SpiceOrder 1

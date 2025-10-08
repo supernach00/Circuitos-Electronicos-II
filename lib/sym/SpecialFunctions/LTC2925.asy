@@ -1,7 +1,7 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal -352 -272 352 272
-TEXT 0 0 Left 2 LT
+TEXT 0 0 Center 2 LT
 WINDOW 0 0 -96 Center 2
 WINDOW 3 0 96 Center 2
 SYMATTR Value LTC2925
@@ -80,4 +80,3 @@ PINATTR SpiceOrder 23
 PIN -192 272 BOTTOM 8
 PINATTR PinName GND
 PINATTR SpiceOrder 24
-

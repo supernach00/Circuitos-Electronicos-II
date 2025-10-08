@@ -1,14 +1,14 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal -176 -288 176 288
-TEXT 0 0 Center 0 LT
-WINDOW 0 0 -128 Center 0
-WINDOW 3 0 128 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 0 -128 Center 2
+WINDOW 3 0 128 Center 2
 SYMATTR Value LT3755-2
 SYMATTR Prefix X
-SYMATTR SpiceModel LT3755.sub
-SYMATTR Value2 LT3755
-SYMATTR Description Full-Featured LED Controller
+SYMATTR SpiceModel LT3755-2.sub
+SYMATTR Value2 LT3755-2
+SYMATTR Description 40Vin, 75Vout LED Controller
 PIN -176 -96 LEFT 8
 PINATTR PinName Vref
 PINATTR SpiceOrder 1

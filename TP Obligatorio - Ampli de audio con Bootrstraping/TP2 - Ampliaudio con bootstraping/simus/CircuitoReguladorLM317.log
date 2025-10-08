@@ -1,4 +1,4 @@
-Circuit: * D:\INGEÑERIA\Circuitos Electronicos II\trabajos practicos\TeX\TP2 - Ampliaudio con bootstraping\simus\CircuitoReguladorLM317.asc
+Circuit: * D:\INGEÑERIA\Circuitos Electronicos II\TP Obligatorio - Ampli de audio con Bootrstraping\TP2 - Ampliaudio con bootstraping\simus\CircuitoReguladorLM317.asc
 
 Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
 Starting Gmin stepping
@@ -11,32 +11,28 @@ Gmin = 0.000142725
 Gmin = 1.5325e-05
 Gmin = 1.6455e-06
 vernier = 0.5
-vernier = 0.25
-Gmin = 5.97037e-07
-vernier = 0.333333
-vernier = 0.444444
-Gmin = 2.7713e-07
-vernier = 0.592592
-Gmin = 8.20177e-08
-vernier = 0.790123
+Gmin = 4.20774e-07
+vernier = 0.666667
+vernier = 0.888888
+Gmin = 8.12392e-08
 vernier = 1
-Gmin = 1.24011e-08
-Gmin = 1.33156e-09
-Gmin = 1.42975e-10
-Gmin = 1.53518e-11
-Gmin = 1.64839e-12
-Gmin = 1.76994e-13
+Gmin = 9.33136e-09
+Gmin = 1.00195e-09
+Gmin = 1.07583e-10
+Gmin = 1.15517e-11
+Gmin = 1.24035e-12
+Gmin = 1.33182e-13
 Gmin = 0
 Gmin stepping succeeded in finding the operating point.
 
 
-Date: Fri Sep 27 22:08:50 2024
-Total elapsed time: 0.119 seconds.
+Date: Sat Oct  4 16:25:30 2025
+Total elapsed time: 0.290 seconds.
 
 tnom = 27
 temp = 27
 method = modified trap
-totiter = 3010
+totiter = 2895
 traniter = 2082
 tranpoints = 1042
 accept = 1042
@@ -45,6 +41,6 @@ matrix size = 40
 fillins = 30
 solver = Normal
 Avg thread counts: 1.2/1.4/1.4/1.2
-Matrix Compiler1: 7.56 KB object code size  1.2/0.9/[0.3]
-Matrix Compiler2: 5.20 KB object code size  0.5/0.9/[0.4]
+Matrix Compiler1: 7.56 KB object code size  1.4/1.2/[0.4]
+Matrix Compiler2: 5.20 KB object code size  0.7/0.7/[0.3]
 

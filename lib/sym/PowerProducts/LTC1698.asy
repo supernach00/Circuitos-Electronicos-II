@@ -1,9 +1,9 @@
 Version 4
 SymbolType BLOCK
 RECTANGLE Normal 144 224 -144 -209
-TEXT 0 -64 Center 0 LT
-WINDOW 3 0 64 Center 0
-WINDOW 0 0 -128 Center 0
+TEXT 0 -64 Center 2 LT
+WINDOW 3 0 64 Center 2
+WINDOW 0 0 -128 Center 2
 SYMATTR Value LTC1698
 SYMATTR SpiceModel LTC1698.sub
 SYMATTR Value2 LTC1698

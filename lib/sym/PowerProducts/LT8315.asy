@@ -8,7 +8,7 @@ SYMATTR Value LT8315
 SYMATTR Prefix X
 SYMATTR SpiceModel LT8315.sub
 SYMATTR Value2 LT8315
-SYMATTR Description 560Vin MicroPower No-Opto Isolated Flyback Converter with 630V/300mA Switch
+SYMATTR Description 560Vin µPower No-Opto Isolated Flyback Converter with 630V/300mA Switch
 PIN 160 48 RIGHT 8
 PINATTR PinName Drain
 PINATTR SpiceOrder 1

@@ -7,7 +7,7 @@ LINE Normal 44 -32 80 -32
 LINE Normal 44 32 80 32
 LINE Normal -64 112 -64 98
 LINE Normal -64 -98 -64 -112
-TEXT -80 0 Left 2 LT
+TEXT -80 0 Center 2 LT
 WINDOW 3 -16 96 Left 2
 WINDOW 0 -16 -96 Left 2
 SYMATTR Value LTC6416

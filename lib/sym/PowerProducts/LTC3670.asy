@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal 144 272 -144 -272
-TEXT 0 0 Center 0 LT
-WINDOW 3 0 96 Center 0
-WINDOW 0 0 -96 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 3 0 96 Center 2
+WINDOW 0 0 -96 Center 2
 SYMATTR Value LTC3670
 SYMATTR Prefix X
 SYMATTR Value2 LTC3670

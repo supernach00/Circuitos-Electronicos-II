@@ -1,9 +1,9 @@
 Version 4
 SymbolType BLOCK
 RECTANGLE Normal 144 161 -144 -144
-TEXT 0 0 Center 0 LT
-WINDOW 0 0 -72 Center 0
-WINDOW 3 1 86 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 0 -72 Center 2
+WINDOW 3 1 86 Center 2
 SYMATTR Value LTC1565
 SYMATTR Description Linear Phase, High Frequency Lowpass Filter
 SYMATTR Prefix X

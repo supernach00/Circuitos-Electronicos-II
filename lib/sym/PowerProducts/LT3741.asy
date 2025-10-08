@@ -1,15 +1,15 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal -176 -352 176 352
-TEXT 0 0 Center 0 LT
-WINDOW 0 0 -144 Center 0
-WINDOW 3 0 144 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 0 -144 Center 2
+WINDOW 3 0 144 Center 2
 SYMATTR Value LT3741
 SYMATTR Prefix X
 SYMATTR SpiceModel LT3741.sub
 SYMATTR Value2 LT3741
 SYMATTR Description High Power, Constant Current, Constant Voltage, Step-Down Controller
-PIN 0 352 BOTTOM 8
+PIN -64 352 BOTTOM 8
 PINATTR PinName GND
 PINATTR SpiceOrder 1
 PIN -176 -288 LEFT 8
@@ -60,3 +60,6 @@ PINATTR SpiceOrder 27
 PIN -64 -352 TOP 8
 PINATTR PinName Vin
 PINATTR SpiceOrder 28
+PIN 64 352 BOTTOM 8
+PINATTR PinName SYNC
+PINATTR SpiceOrder 29

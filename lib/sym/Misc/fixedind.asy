@@ -3,12 +3,12 @@ SymbolType CELL
 ARC Normal 0 40 32 72 4 68 4 44
 ARC Normal 0 64 32 96 16 96 4 68
 ARC Normal 0 16 32 48 4 44 16 16
-WINDOW 0 36 40 Left 0
-WINDOW 3 36 80 Left 0
+WINDOW 0 36 40 Left 2
+WINDOW 3 36 80 Left 2
 SYMATTR Value L
 SYMATTR Prefix L
 SYMATTR Description An inductor that cannot be edited.  Typically used with the 1533/1534
-SYMATTR DefSubstrate noedit
+SYMATTR Def_Sub noedit
 PIN 16 16 NONE 0
 PINATTR PinName A
 PINATTR SpiceOrder 1

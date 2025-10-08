@@ -6,14 +6,14 @@ LINE Normal -8 -100 8 -100
 RECTANGLE Normal -144 -128 144 128
 ARC Normal -20 -124 4 -100 -20 -112 -8 -100
 ARC Normal -4 -124 20 -100 8 -100 20 -112
-TEXT 0 0 Center 0 LT
-WINDOW 0 0 -64 Center 0
-WINDOW 3 0 64 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 0 -64 Center 2
+WINDOW 3 0 64 Center 2
 SYMATTR Value LTC1261CS8-4.5
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC1261CS8-4.5.sub
 SYMATTR Value2 LTC1261CS8-4.5
-SYMATTR Description Switched Capacitor Regulated Voltage Inverter, Fixed 4.5V Output
+SYMATTR Description Switched Capacitor Regulated Voltage Inverter, Fixed 4V Output
 PIN -144 -96 LEFT 8
 PINATTR PinName Vcc
 PINATTR SpiceOrder 1

@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal -208 -592 208 592
-TEXT 0 0 Center 0 LT
-WINDOW 0 0 -288 Center 0
-WINDOW 3 0 288 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 0 -288 Center 2
+WINDOW 3 0 288 Center 2
 SYMATTR Value LTC3880
 SYMATTR Prefix X
 SYMATTR Description Dual Output Polyphase Step-Down DC/DC Controller with Digital Power System Management\n\nNote: SDA, SCL, _Alert, Share_clk, WP, GPIOs, ASEL, TSNSs are not modeled

@@ -5,8 +5,8 @@ LINE Normal 0 -32 0 96
 LINE Normal 0 96 112 96
 LINE Normal 112 96 144 32
 LINE Normal 144 32 112 -32
-WINDOW 0 16 -48 Left 0
-WINDOW 3 16 120 Left 0
+WINDOW 0 16 -48 Left 2
+WINDOW 3 16 120 Left 2
 SYMATTR Prefix A
 SYMATTR SpiceModel MODULATOR
 SYMATTR Description Behavioral VCO and Modulator.  Output is a sine wave modulated by AM and FM input voltages.

@@ -1,7 +1,7 @@
 Version 4
 SymbolType BLOCK
 RECTANGLE Normal -352 -384 384 384
-TEXT 0 -7 Left 2 ADI
+TEXT 0 -7 Center 2 ADI
 WINDOW 3 0 128 Center 2
 WINDOW 0 0 -160 Center 2
 SYMATTR Value AD8452

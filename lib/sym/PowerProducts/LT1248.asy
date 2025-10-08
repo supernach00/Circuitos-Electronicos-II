@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal -192 -320 192 240
-TEXT 0 -80 Center 0 LT
-WINDOW 0 0 -199 Center 0
-WINDOW 3 0 48 Center 0
+TEXT 0 -80 Center 2 LT
+WINDOW 0 0 -199 Center 2
+WINDOW 3 0 48 Center 2
 SYMATTR Value LT1248
 SYMATTR Prefix X
 SYMATTR SpiceModel LT1248.sub

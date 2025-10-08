@@ -5,12 +5,12 @@ LINE Normal 80 -96 -112 -96
 LINE Normal 144 0 80 -96
 LINE Normal 144 0 80 96
 LINE Normal 80 96 -112 96
-TEXT -8 0 Left 0 LT
-WINDOW 0 -8 -40 Center 0
-WINDOW 3 -8 42 Center 0
+TEXT -8 0 Center 2 LT
+WINDOW 0 -8 -40 Center 2
+WINDOW 3 -8 42 Center 2
 SYMATTR Value LTC6910-1
 SYMATTR Prefix X
-SYMATTR SpiceModel LTC1.LIB
+SYMATTR SpiceModel LTC1.lib
 SYMATTR Value2 LTC6910-1
 SYMATTR Description Digitally Controlled Programmable Gain Amplifiers in SOT-23
 PIN 144 0 NONE 0

@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal -144 -160 144 160
-TEXT 0 7 Center 0 LT
-WINDOW 0 0 -71 Center 0
-WINDOW 3 0 88 Center 0
+TEXT 0 7 Center 2 LT
+WINDOW 0 0 -71 Center 2
+WINDOW 3 0 88 Center 2
 SYMATTR Value LTC3805
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC3805.sub
@@ -38,4 +38,4 @@ PINATTR PinName Gate
 PINATTR SpiceOrder 10
 PIN 0 160 BOTTOM 8
 PINATTR PinName GND
-PINATTR SpiceOrder 11
+PINATTR SpiceOrder 6

@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal -224 -400 224 496
-TEXT 0 0 Center 0 LT
-WINDOW 0 0 -192 Center 0
-WINDOW 3 0 192 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 0 -192 Center 2
+WINDOW 3 0 192 Center 2
 SYMATTR Value LTC3862-1
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC3862-1.sub
@@ -77,4 +77,4 @@ PINATTR PinName Sense1+
 PINATTR SpiceOrder 23
 PIN 144 -400 TOP 8
 PINATTR PinName 3V8
-PINATTR SpiceOrder 24
+PINATTR SpiceOrder 15

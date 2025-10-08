@@ -9,8 +9,8 @@ LINE Normal 12 64 16 64
 LINE Normal 12 68 0 64
 LINE Normal 12 60 0 64
 LINE Normal 12 60 12 68
-WINDOW 0 56 32 Left 0
-WINDOW 3 56 72 Left 0
+WINDOW 0 56 32 Left 2
+WINDOW 3 56 72 Left 2
 SYMATTR Value PJF
 SYMATTR Prefix JP
 SYMATTR Description P-Channel JFET transistor

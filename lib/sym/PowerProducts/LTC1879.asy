@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal -160 -160 160 160
-TEXT 0 0 Center 0 LT
-WINDOW 0 0 -72 Center 0
-WINDOW 3 0 64 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 0 -72 Center 2
+WINDOW 3 0 64 Center 2
 SYMATTR Value LTC1879
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC1879.sub
@@ -36,12 +36,12 @@ PINATTR SpiceOrder 8
 PIN -64 -160 TOP 8
 PINATTR PinName SVin
 PINATTR SpiceOrder 13
+PIN -160 -96 LEFT 8
+PINATTR PinName Pgood
+PINATTR SpiceOrder 14
 PIN -160 32 LEFT 8
 PINATTR PinName Sync/Mode
 PINATTR SpiceOrder 15
 PIN -160 96 LEFT 8
 PINATTR PinName PLL_LPF
 PINATTR SpiceOrder 16
-PIN -160 -96 LEFT 8
-PINATTR PinName Pgood
-PINATTR SpiceOrder 14

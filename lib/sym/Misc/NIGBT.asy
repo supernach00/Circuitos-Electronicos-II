@@ -14,8 +14,8 @@ LINE Normal 48 0 32 8
 LINE Normal 16 16 36 12
 LINE Normal 16 16 32 4
 LINE Normal 36 12 32 4
-WINDOW 0 56 32 Left 0
-WINDOW 3 56 72 Left 0
+WINDOW 0 56 32 Left 2
+WINDOW 3 56 72 Left 2
 SYMATTR Value NIGBT
 SYMATTR Prefix Z
 SYMATTR Description N-Channel IGBT symbol for a model you supply.

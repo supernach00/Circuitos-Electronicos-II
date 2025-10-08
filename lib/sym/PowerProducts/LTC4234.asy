@@ -2,7 +2,7 @@ Version 4
 SymbolType BLOCK
 RECTANGLE Normal 142 270 -144 -208
 RECTANGLE Normal 142 448 -144 270
-TEXT 0 0 Left 2 LT
+TEXT 0 0 Center 2 LT
 TEXT -6 289 Center 2 FET Temp
 WINDOW 0 0 -64 Center 2
 WINDOW 39 -2 334 Center 2

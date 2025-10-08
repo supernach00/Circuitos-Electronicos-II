@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal 144 112 -144 -95
-TEXT 0 0 Center 0 LT
-WINDOW 0 0 -39 Center 0
-WINDOW 3 1 53 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 0 -39 Center 2
+WINDOW 3 1 53 Center 2
 SYMATTR Value LTC2908-A1
 SYMATTR Prefix X
 SYMATTR Description Precision Six Supply Monitor (5, 3.3, 2.5, 1.8, 2 adjust-0.5)

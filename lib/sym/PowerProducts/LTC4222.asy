@@ -1,11 +1,11 @@
 Version 4
 SymbolType BLOCK
 RECTANGLE Normal 512 352 -320 -128
-TEXT 74 72 Center 0 LT
-WINDOW 3 74 120 Center 0
-WINDOW 0 74 24 Center 0
-WINDOW 39 76 152 Center 0
-WINDOW 40 75 190 Center 0
+TEXT 74 72 Center 2 LT
+WINDOW 3 74 120 Center 2
+WINDOW 0 74 24 Center 2
+WINDOW 39 76 152 Center 2
+WINDOW 40 75 190 Center 2
 SYMATTR Value LTC4222
 SYMATTR SpiceLine uvautoretry1=1 ovautoretry1=1 ocautoretry1=0
 SYMATTR SpiceLine2 uvautoretry2=1 ovautoretry2=1 ocautoretry2=0

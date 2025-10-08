@@ -6,8 +6,8 @@ LINE Normal -4 72 4 72
 LINE Normal -4 40 4 40
 LINE Normal 0 36 0 44
 CIRCLE Normal -32 24 32 88
-WINDOW 0 24 16 Left 0
-WINDOW 3 24 104 Left 0
+WINDOW 0 24 16 Left 2
+WINDOW 3 24 104 Left 2
 SYMATTR Value POLY()
 SYMATTR Prefix E
 SYMATTR Description Voltage dependent voltage source with two terminals.  Useful for drafting schematic generating archaic voltage controlled syntax.

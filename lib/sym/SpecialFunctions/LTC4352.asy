@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal -288 -176 288 160
-TEXT 0 -8 Center 0 LT
-WINDOW 0 0 -64 Center 0
-WINDOW 3 0 48 Center 0
+TEXT 0 -8 Center 2 LT
+WINDOW 0 0 -64 Center 2
+WINDOW 3 0 48 Center 2
 SYMATTR Value LTC4352
 SYMATTR SpiceModel LTC4352.sub
 SYMATTR Description Low Voltage Ideal Diode Controller with Monitoring

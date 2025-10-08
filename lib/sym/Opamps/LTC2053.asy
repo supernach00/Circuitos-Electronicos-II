@@ -52,9 +52,9 @@ CIRCLE Normal -29 19 -35 13
 CIRCLE Normal -31 -15 -33 -17
 CIRCLE Normal -30 -14 -34 -18
 CIRCLE Normal -29 -13 -35 -19
-TEXT 48 -45 Left 0 LT
-WINDOW 3 -51 -44 Center 0
-WINDOW 0 30 -75 Left 0
+TEXT 48 -45 Center 2 LT
+WINDOW 3 -51 -44 Center 2
+WINDOW 0 30 -75 Left 2
 SYMATTR Value LTC2053
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC4.lib

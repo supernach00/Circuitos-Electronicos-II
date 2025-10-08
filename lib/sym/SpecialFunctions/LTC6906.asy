@@ -8,7 +8,7 @@ SYMATTR Value LTC6906
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC6906.sub
 SYMATTR Value2 LTC6906
-SYMATTR Description Micropower, 10KHz to 1MHz Resistor Set Oscillator in SOT-23
+SYMATTR Description µPower, 10kHz to 1MHz Resistor Set Oscillator in SOT-23
 PIN 112 -80 RIGHT 8
 PINATTR PinName OUT
 PINATTR SpiceOrder 1

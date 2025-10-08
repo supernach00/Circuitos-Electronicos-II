@@ -1,7 +1,7 @@
 Version 4
 SymbolType BLOCK
 RECTANGLE Normal 144 65 -143 -145
-TEXT 6 -40 Left 2 LT
+TEXT 6 -40 Center 2 LT
 WINDOW 3 6 -1 Center 2
 WINDOW 0 6 -80 Center 2
 SYMATTR Value LTC4366-2

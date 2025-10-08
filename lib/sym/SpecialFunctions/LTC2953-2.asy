@@ -1,7 +1,7 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal 144 336 -144 -288
-TEXT 0 0 Left 2 LT
+TEXT 0 0 Center 2 LT
 WINDOW 3 0 48 Center 2
 WINDOW 0 0 -48 Center 2
 SYMATTR Value LTC2953-2

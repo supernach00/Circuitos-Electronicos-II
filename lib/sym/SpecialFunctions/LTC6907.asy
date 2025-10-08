@@ -8,7 +8,7 @@ SYMATTR Value LTC6907
 SYMATTR Prefix X
 SYMATTR SpiceModel LTC6907.sub
 SYMATTR Value2 LTC6907
-SYMATTR Description Micropower, 40KHz to 4MHz Resistor Set Oscillator in SOT-23
+SYMATTR Description µPower, 40kHz to 4MHz Resistor Set Oscillator in SOT-23
 PIN 112 -80 RIGHT 8
 PINATTR PinName OUT
 PINATTR SpiceOrder 1

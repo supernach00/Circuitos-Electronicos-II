@@ -1,9 +1,9 @@
 Version 4
 SymbolType CELL
 RECTANGLE Normal 160 128 -160 -128
-TEXT 0 0 Center 0 LT
-WINDOW 0 0 -40 Center 0
-WINDOW 3 1 40 Center 0
+TEXT 0 0 Center 2 LT
+WINDOW 0 0 -40 Center 2
+WINDOW 3 1 40 Center 2
 SYMATTR Value LTC2908-C1
 SYMATTR Prefix X
 SYMATTR Description Hex Supply Monitor (2.5, 5 adjust-0.5)
